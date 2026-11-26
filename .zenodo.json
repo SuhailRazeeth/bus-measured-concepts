@@ -7,7 +7,7 @@
     {"name": "Nuha, F. Fathima"},
     {"name": "Mufassirin, M.M."}
   ],
-  "license": "MIT",
+  "license": "mit",
   "keywords": ["breast ultrasound", "concept bottleneck model", "concept leakage", "explainable artificial intelligence", "BI-RADS", "MedSAM"],
   "access_right": "open"
 }

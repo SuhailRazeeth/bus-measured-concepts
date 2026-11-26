@@ -1,0 +1,13 @@
+{
+  "title": "Measured BI-RADS Concepts and Concept Leakage in Interpretable Breast Ultrasound Diagnosis: code and derived data",
+  "upload_type": "software",
+  "description": "Code, summary statistics, and derived data (lesion lists, patient level splits, measured concept values, and MedSAM masks) for a study of concept bottleneck models for breast ultrasound supervised by BI-RADS aligned concepts measured on MedSAM segmentations, evaluated with leave one dataset out validation on five public datasets.",
+  "creators": [
+    {"name": "Razeeth, M.S. Suhail"},
+    {"name": "Nuha, F. Fathima"},
+    {"name": "Mufassirin, M.M."}
+  ],
+  "license": "MIT",
+  "keywords": ["breast ultrasound", "concept bottleneck model", "concept leakage", "explainable artificial intelligence", "BI-RADS", "MedSAM"],
+  "access_right": "open"
+}

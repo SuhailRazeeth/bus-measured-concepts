@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+code/config.yaml
+code/logs/
+*.npz
+*.npy
+*.pt
+*.pth
+.ipynb_checkpoints/

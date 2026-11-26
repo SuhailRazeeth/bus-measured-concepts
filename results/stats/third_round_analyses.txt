@@ -1,0 +1,663 @@
+===== 19 THIRD-ROUND ANALYSES
+THIRD-ROUND REVISION ANALYSES (B = 2000 patient bootstrap resamples)
+
+A  NON-INFERIORITY VS BLACK BOX: pooled with patient bootstrap, with seed+patient bootstrap, DL and HKSJ random effects
+                             backbone                            model  pooled     pooled_patient_boot pooled_seed_patient_boot  lower_seed_patient                      dl   tau2     I2                    hksj  hksj_lower       hksj_seed_patient  hksj_seed_patient_lower NI_0.02_seed_patient NI_0.02_hksj NI_0.03_seed_patient NI_0.03_hksj
+                               DINOv2              Multitask black box  0.0008 +0.001 [-0.006, +0.008]  +0.001 [-0.012, +0.013]             -0.0115 +0.003 [-0.006, +0.011] 0.0000 0.4588 +0.003 [-0.012, +0.017]     -0.0121 +0.003 [-0.015, +0.020]                  -0.0151                 True         True                 True         True
+                               DINOv2                 Joint CBM p=0.25 -0.0036 -0.004 [-0.013, +0.006]  -0.005 [-0.020, +0.011]             -0.0199 -0.005 [-0.027, +0.017] 0.0004 0.8501 -0.005 [-0.041, +0.031]     -0.0407 -0.002 [-0.031, +0.026]                  -0.0305                 True        False                 True        False
+                               DINOv2                  Joint CBM p=0.5 -0.0104 -0.010 [-0.019, -0.002]  -0.010 [-0.027, +0.005]             -0.0267 -0.011 [-0.031, +0.008] 0.0003 0.8169 -0.011 [-0.043, +0.021]     -0.0433 -0.008 [-0.033, +0.018]                  -0.0332                False        False                 True        False
+                               DINOv2                 Joint CBM p=0.75 -0.0241 -0.024 [-0.036, -0.012]  -0.023 [-0.044, -0.004]             -0.0437 -0.025 [-0.062, +0.012] 0.0013 0.9031 -0.025 [-0.085, +0.035]     -0.0853 -0.018 [-0.063, +0.027]                  -0.0629                False        False                False        False
+                               DINOv2                  Joint CBM p=1.0 -0.0605 -0.061 [-0.079, -0.043]  -0.060 [-0.084, -0.036]             -0.0844 -0.062 [-0.113, -0.011] 0.0023 0.8833 -0.062 [-0.144, +0.020]     -0.1443 -0.058 [-0.124, +0.007]                  -0.1240                False        False                False        False
+                               DINOv2   Joint CBM, 6 geometry concepts -0.0233 -0.023 [-0.034, -0.013]  -0.025 [-0.045, -0.008]             -0.0453 -0.024 [-0.051, +0.002] 0.0006 0.8482 -0.024 [-0.067, +0.018]     -0.0672 -0.023 [-0.060, +0.015]                  -0.0602                False        False                False        False
+                               DINOv2             Shuffled-concept CBM -0.0249 -0.025 [-0.036, -0.015]  -0.025 [-0.043, -0.008]             -0.0432 -0.025 [-0.060, +0.009] 0.0011 0.9127 -0.025 [-0.081, +0.031]     -0.0814 -0.024 [-0.072, +0.024]                  -0.0724                False        False                False        False
+                               DINOv2                   Sequential CBM -0.0834 -0.084 [-0.107, -0.061]  -0.082 [-0.108, -0.057]             -0.1079 -0.083 [-0.113, -0.052] 0.0005 0.5434 -0.083 [-0.133, -0.032]     -0.1334 -0.083 [-0.133, -0.033]                  -0.1329                False        False                False        False
+                               DINOv2          Hybrid CBM, penalty 0.1 -0.0130 -0.013 [-0.023, -0.003]  -0.014 [-0.030, +0.001]             -0.0301 -0.013 [-0.022, -0.003] 0.0000 0.1867 -0.013 [-0.029, +0.003]     -0.0287 -0.011 [-0.036, +0.013]                  -0.0360                False        False                False         True
+                               DINOv2          Hybrid CBM, penalty 1.0 -0.0509 -0.051 [-0.070, -0.034]  -0.050 [-0.073, -0.029]             -0.0731 -0.053 [-0.076, -0.030] 0.0003 0.5163 -0.053 [-0.091, -0.015]     -0.0908 -0.049 [-0.088, -0.010]                  -0.0879                False        False                False        False
+                               DINOv2          Shuffled-concept hybrid -0.0068 -0.007 [-0.017, +0.003]  -0.008 [-0.025, +0.008]             -0.0247 -0.007 [-0.017, +0.004] 0.0000 0.3955 -0.007 [-0.024, +0.011]     -0.0238 -0.009 [-0.032, +0.015]                  -0.0318                False        False                 True         True
+                               DINOv2       Shuffled-concept multitask -0.0027 -0.003 [-0.011, +0.005]  -0.003 [-0.017, +0.010]             -0.0171 -0.002 [-0.008, +0.005] 0.0000 0.0000 -0.002 [-0.012, +0.009]     -0.0120 -0.002 [-0.022, +0.019]                  -0.0225                 True         True                 True         True
+                               DINOv2                    Joint CBM p=0 -0.0096 -0.010 [-0.019, -0.001]  -0.009 [-0.023, +0.006]             -0.0232 -0.011 [-0.030, +0.009] 0.0003 0.8005 -0.011 [-0.042, +0.021]     -0.0423 -0.011 [-0.039, +0.016]                  -0.0389                False        False                 True        False
+                               DINOv2                  Independent CBM -0.0828 -0.083 [-0.106, -0.060]  -0.080 [-0.105, -0.055]             -0.1047 -0.083 [-0.111, -0.055] 0.0004 0.4709 -0.083 [-0.129, -0.037]     -0.1287 -0.083 [-0.128, -0.038]                  -0.1285                False        False                False        False
+                               DINOv2 Black box with measured concepts  0.0027 +0.002 [-0.005, +0.010]  +0.002 [-0.012, +0.015]             -0.0116 +0.004 [-0.010, +0.017] 0.0001 0.7194 +0.004 [-0.018, +0.025]     -0.0178 +0.004 [-0.018, +0.025]                  -0.0177                 True         True                 True         True
+                           BiomedCLIP              Multitask black box  0.0087 +0.009 [+0.001, +0.017]  +0.009 [-0.005, +0.024]             -0.0055 +0.007 [+0.002, +0.013] 0.0000 0.0000 +0.007 [-0.002, +0.017]     -0.0021 +0.007 [-0.016, +0.030]                  -0.0156                 True         True                 True         True
+                           BiomedCLIP                 Joint CBM p=0.25 -0.0073 -0.008 [-0.019, +0.004]  -0.009 [-0.028, +0.011]             -0.0284 -0.005 [-0.024, +0.013] 0.0002 0.7292 -0.005 [-0.040, +0.029]     -0.0396 -0.008 [-0.042, +0.026]                  -0.0416                False        False                 True        False
+                           BiomedCLIP                  Joint CBM p=0.5 -0.0111 -0.011 [-0.023, -0.001]  -0.012 [-0.031, +0.007]             -0.0315 -0.011 [-0.031, +0.009] 0.0003 0.7528 -0.011 [-0.044, +0.022]     -0.0441 -0.007 [-0.035, +0.021]                  -0.0353                False        False                False        False
+                           BiomedCLIP   Joint CBM, 6 geometry concepts -0.0123 -0.013 [-0.027, +0.001]  -0.015 [-0.037, +0.006]             -0.0366 -0.014 [-0.048, +0.020] 0.0010 0.8648 -0.014 [-0.070, +0.041]     -0.0701 -0.009 [-0.061, +0.043]                  -0.0612                False        False                False        False
+                           BiomedCLIP             Shuffled-concept CBM -0.0155 -0.016 [-0.029, -0.002]  -0.017 [-0.038, +0.004]             -0.0376 -0.014 [-0.030, +0.002] 0.0001 0.4306 -0.014 [-0.042, +0.014]     -0.0416 -0.014 [-0.045, +0.016]                  -0.0451                False        False                False        False
+                           BiomedCLIP                   Sequential CBM -0.0639 -0.064 [-0.090, -0.037]  -0.063 [-0.092, -0.034]             -0.0915 -0.071 [-0.102, -0.041] 0.0005 0.5004 -0.071 [-0.121, -0.022]     -0.1206 -0.069 [-0.120, -0.018]                  -0.1202                False        False                False        False
+                           BiomedCLIP          Hybrid CBM, penalty 0.1  0.0019 +0.002 [-0.008, +0.014]  +0.002 [-0.014, +0.018]             -0.0144 -0.002 [-0.010, +0.005] 0.0000 0.0000 -0.002 [-0.015, +0.010]     -0.0155 -0.000 [-0.025, +0.025]                  -0.0253                 True         True                 True         True
+                           BiomedCLIP          Hybrid CBM, penalty 1.0 -0.0294 -0.030 [-0.049, -0.009]  -0.029 [-0.053, -0.004]             -0.0525 -0.034 [-0.062, -0.007] 0.0005 0.6259 -0.034 [-0.079, +0.011]     -0.0792 -0.033 [-0.080, +0.013]                  -0.0800                False        False                False        False
+                           BiomedCLIP          Shuffled-concept hybrid -0.0100 -0.010 [-0.021, +0.001]  -0.011 [-0.030, +0.006]             -0.0296 -0.007 [-0.018, +0.003] 0.0000 0.1890 -0.007 [-0.025, +0.010]     -0.0246 -0.010 [-0.038, +0.018]                  -0.0385                False        False                 True         True
+                           BiomedCLIP       Shuffled-concept multitask  0.0072 +0.007 [+0.000, +0.014]  +0.007 [-0.006, +0.023]             -0.0062 +0.005 [-0.001, +0.011] 0.0000 0.0000 +0.005 [-0.005, +0.014]     -0.0051 +0.008 [-0.014, +0.030]                  -0.0142                 True         True                 True         True
+                           BiomedCLIP                    Joint CBM p=0 -0.0033 -0.003 [-0.013, +0.006]  -0.006 [-0.027, +0.014]             -0.0272 -0.004 [-0.021, +0.012] 0.0002 0.6957 -0.004 [-0.035, +0.026]     -0.0347 -0.010 [-0.040, +0.020]                  -0.0403                False        False                 True        False
+                           BiomedCLIP                  Independent CBM -0.0648 -0.065 [-0.091, -0.038]  -0.064 [-0.094, -0.035]             -0.0939 -0.072 [-0.102, -0.043] 0.0004 0.4653 -0.072 [-0.120, -0.025]     -0.1198 -0.070 [-0.119, -0.022]                  -0.1189                False        False                False        False
+                           BiomedCLIP Black box with measured concepts -0.0007 -0.001 [-0.009, +0.008]  -0.001 [-0.018, +0.016]             -0.0179 +0.001 [-0.006, +0.008] 0.0000 0.0000 +0.001 [-0.010, +0.012]     -0.0098 -0.001 [-0.027, +0.025]                  -0.0272                 True         True                 True         True
+DINOv2 hybrid vs BiomedCLIP black box          Hybrid CBM, penalty 0.1  0.0064 +0.006 [-0.006, +0.021]                      NaN                 NaN                     NaN    NaN    NaN +0.004 [-0.012, +0.020]     -0.0123                     NaN                      NaN                  NaN          NaN                  NaN          NaN
+BiomedCLIP hybrid vs DINOv2 black box          Hybrid CBM, penalty 0.1 -0.0175 -0.017 [-0.029, -0.007]                      NaN                 NaN                     NaN    NaN    NaN -0.018 [-0.038, +0.003]     -0.0384                     NaN                      NaN                  NaN          NaN                  NaN          NaN
+
+B  REPLACEMENT WITH THE MEDSAM TRAINING TARGETS (change in AUC; rescaled = targets matched to the mean and SD of the predictions)
+  backbone                   model  heldout  rescaled_targets  auc_before  auc_after                  change
+    DINOv2         Joint CBM p=0.5  BUS-BRA             False      0.8507     0.7984 -0.052 [-0.076, -0.029]
+    DINOv2         Joint CBM p=0.5 BUS-UCLM             False      0.9451     0.8520 -0.093 [-0.171, -0.031]
+    DINOv2         Joint CBM p=0.5     BUSB             False      0.9247     0.8479 -0.077 [-0.129, -0.029]
+    DINOv2         Joint CBM p=0.5   BrEaST             False      0.8722     0.7178 -0.154 [-0.213, -0.095]
+    DINOv2         Joint CBM p=0.5   pooled             False         NaN        NaN -0.094 [-0.122, -0.069]
+    DINOv2         Joint CBM p=0.5  BUS-BRA              True      0.8507     0.8050 -0.045 [-0.068, -0.024]
+    DINOv2         Joint CBM p=0.5 BUS-UCLM              True      0.9451     0.8483 -0.097 [-0.174, -0.035]
+    DINOv2         Joint CBM p=0.5     BUSB              True      0.9247     0.8479 -0.077 [-0.129, -0.031]
+    DINOv2         Joint CBM p=0.5   BrEaST              True      0.8722     0.7206 -0.151 [-0.210, -0.094]
+    DINOv2         Joint CBM p=0.5   pooled              True         NaN        NaN -0.093 [-0.120, -0.067]
+    DINOv2           Joint CBM p=0  BUS-BRA             False      0.8527     0.7881 -0.064 [-0.090, -0.039]
+    DINOv2           Joint CBM p=0 BUS-UCLM             False      0.9451     0.8121 -0.133 [-0.218, -0.060]
+    DINOv2           Joint CBM p=0     BUSB             False      0.9255     0.8369 -0.089 [-0.146, -0.037]
+    DINOv2           Joint CBM p=0   BrEaST             False      0.8724     0.7139 -0.158 [-0.219, -0.096]
+    DINOv2           Joint CBM p=0   pooled             False         NaN        NaN -0.111 [-0.142, -0.083]
+    DINOv2           Joint CBM p=0  BUS-BRA              True      0.8527     0.8104 -0.042 [-0.066, -0.018]
+    DINOv2           Joint CBM p=0 BUS-UCLM              True      0.9451     0.8248 -0.120 [-0.202, -0.052]
+    DINOv2           Joint CBM p=0     BUSB              True      0.9255     0.8396 -0.086 [-0.141, -0.036]
+    DINOv2           Joint CBM p=0   BrEaST              True      0.8724     0.7196 -0.152 [-0.212, -0.091]
+    DINOv2           Joint CBM p=0   pooled              True         NaN        NaN -0.100 [-0.129, -0.073]
+    DINOv2         Independent CBM  BUS-BRA             False      0.7934     0.8071 +0.014 [-0.003, +0.032]
+    DINOv2         Independent CBM BUS-UCLM             False      0.8637     0.8407 -0.023 [-0.054, +0.006]
+    DINOv2         Independent CBM     BUSB             False      0.8803     0.8418 -0.038 [-0.072, -0.010]
+    DINOv2         Independent CBM   BrEaST             False      0.7657     0.7191 -0.046 [-0.080, -0.014]
+    DINOv2         Independent CBM   pooled             False         NaN        NaN -0.023 [-0.038, -0.009]
+    DINOv2         Independent CBM  BUS-BRA              True      0.7934     0.8062 +0.013 [-0.003, +0.030]
+    DINOv2         Independent CBM BUS-UCLM              True      0.8637     0.8406 -0.023 [-0.053, +0.006]
+    DINOv2         Independent CBM     BUSB              True      0.8803     0.8451 -0.035 [-0.067, -0.009]
+    DINOv2         Independent CBM   BrEaST              True      0.7657     0.7181 -0.047 [-0.080, -0.016]
+    DINOv2         Independent CBM   pooled              True         NaN        NaN -0.023 [-0.037, -0.010]
+    DINOv2          Sequential CBM  BUS-BRA             False      0.7957     0.8058 +0.010 [-0.007, +0.028]
+    DINOv2          Sequential CBM BUS-UCLM             False      0.8630     0.8467 -0.016 [-0.048, +0.013]
+    DINOv2          Sequential CBM     BUSB             False      0.8829     0.8471 -0.036 [-0.066, -0.009]
+    DINOv2          Sequential CBM   BrEaST             False      0.7588     0.7202 -0.038 [-0.074, -0.006]
+    DINOv2          Sequential CBM   pooled             False         NaN        NaN -0.020 [-0.035, -0.007]
+    DINOv2          Sequential CBM  BUS-BRA              True      0.7957     0.8065 +0.011 [-0.005, +0.028]
+    DINOv2          Sequential CBM BUS-UCLM              True      0.8630     0.8440 -0.019 [-0.052, +0.013]
+    DINOv2          Sequential CBM     BUSB              True      0.8829     0.8474 -0.035 [-0.066, -0.010]
+    DINOv2          Sequential CBM   BrEaST              True      0.7588     0.7206 -0.038 [-0.071, -0.007]
+    DINOv2          Sequential CBM   pooled              True         NaN        NaN -0.020 [-0.035, -0.007]
+    DINOv2 Hybrid CBM, penalty 0.1  BUS-BRA             False      0.8730     0.8694 -0.004 [-0.011, +0.004]
+    DINOv2 Hybrid CBM, penalty 0.1 BUS-UCLM             False      0.9261     0.9068 -0.019 [-0.050, +0.007]
+    DINOv2 Hybrid CBM, penalty 0.1     BUSB             False      0.9261     0.9021 -0.024 [-0.051, -0.001]
+    DINOv2 Hybrid CBM, penalty 0.1   BrEaST             False      0.8570     0.8332 -0.024 [-0.052, +0.003]
+    DINOv2 Hybrid CBM, penalty 0.1   pooled             False         NaN        NaN -0.018 [-0.030, -0.006]
+    DINOv2 Hybrid CBM, penalty 0.1  BUS-BRA              True      0.8730     0.8757 +0.003 [-0.003, +0.008]
+    DINOv2 Hybrid CBM, penalty 0.1 BUS-UCLM              True      0.9261     0.9141 -0.012 [-0.032, +0.005]
+    DINOv2 Hybrid CBM, penalty 0.1     BUSB              True      0.9261     0.9081 -0.018 [-0.042, +0.002]
+    DINOv2 Hybrid CBM, penalty 0.1   BrEaST              True      0.8570     0.8503 -0.007 [-0.029, +0.015]
+    DINOv2 Hybrid CBM, penalty 0.1   pooled              True         NaN        NaN -0.009 [-0.018, +0.000]
+    DINOv2    Shuffled-concept CBM  BUS-BRA             False      0.8143     0.6526 -0.162 [-0.199, -0.126]
+    DINOv2    Shuffled-concept CBM BUS-UCLM             False      0.9390     0.6278 -0.308 [-0.421, -0.199]
+    DINOv2    Shuffled-concept CBM     BUSB             False      0.9059     0.6845 -0.222 [-0.317, -0.130]
+    DINOv2    Shuffled-concept CBM   BrEaST             False      0.8756     0.5832 -0.292 [-0.373, -0.212]
+    DINOv2    Shuffled-concept CBM   pooled             False         NaN        NaN -0.246 [-0.287, -0.203]
+    DINOv2    Shuffled-concept CBM  BUS-BRA              True      0.8143     0.7295 -0.085 [-0.118, -0.051]
+    DINOv2    Shuffled-concept CBM BUS-UCLM              True      0.9390     0.6767 -0.259 [-0.362, -0.159]
+    DINOv2    Shuffled-concept CBM     BUSB              True      0.9059     0.7824 -0.125 [-0.207, -0.048]
+    DINOv2    Shuffled-concept CBM   BrEaST              True      0.8756     0.6698 -0.205 [-0.278, -0.136]
+    DINOv2    Shuffled-concept CBM   pooled              True         NaN        NaN -0.168 [-0.206, -0.131]
+    DINOv2 Shuffled-concept hybrid  BUS-BRA             False      0.8757     0.8689 -0.007 [-0.014, +0.000]
+    DINOv2 Shuffled-concept hybrid BUS-UCLM             False      0.9335     0.9179 -0.015 [-0.040, +0.009]
+    DINOv2 Shuffled-concept hybrid     BUSB             False      0.9113     0.8838 -0.028 [-0.064, -0.001]
+    DINOv2 Shuffled-concept hybrid   BrEaST             False      0.8866     0.8725 -0.014 [-0.033, +0.002]
+    DINOv2 Shuffled-concept hybrid   pooled             False         NaN        NaN -0.016 [-0.029, -0.006]
+    DINOv2 Shuffled-concept hybrid  BUS-BRA              True      0.8757     0.8727 -0.003 [-0.005, -0.001]
+    DINOv2 Shuffled-concept hybrid BUS-UCLM              True      0.9335     0.9333 -0.000 [-0.006, +0.006]
+    DINOv2 Shuffled-concept hybrid     BUSB              True      0.9113     0.9006 -0.011 [-0.022, -0.002]
+    DINOv2 Shuffled-concept hybrid   BrEaST              True      0.8866     0.8895 +0.003 [-0.001, +0.007]
+    DINOv2 Shuffled-concept hybrid   pooled              True         NaN        NaN -0.003 [-0.006, +0.000]
+BiomedCLIP         Joint CBM p=0.5  BUS-BRA             False      0.8357     0.7669 -0.068 [-0.096, -0.041]
+BiomedCLIP         Joint CBM p=0.5 BUS-UCLM             False      0.9124     0.8559 -0.057 [-0.155, +0.025]
+BiomedCLIP         Joint CBM p=0.5     BUSB             False      0.9094     0.8469 -0.062 [-0.129, +0.008]
+BiomedCLIP         Joint CBM p=0.5   BrEaST             False      0.8546     0.7110 -0.144 [-0.202, -0.083]
+BiomedCLIP         Joint CBM p=0.5   pooled             False         NaN        NaN -0.083 [-0.116, -0.051]
+BiomedCLIP         Joint CBM p=0.5  BUS-BRA              True      0.8357     0.7814 -0.054 [-0.082, -0.027]
+BiomedCLIP         Joint CBM p=0.5 BUS-UCLM              True      0.9124     0.8497 -0.063 [-0.161, +0.017]
+BiomedCLIP         Joint CBM p=0.5     BUSB              True      0.9094     0.8525 -0.057 [-0.119, +0.010]
+BiomedCLIP         Joint CBM p=0.5   BrEaST              True      0.8546     0.7146 -0.140 [-0.198, -0.082]
+BiomedCLIP         Joint CBM p=0.5   pooled              True         NaN        NaN -0.079 [-0.111, -0.048]
+BiomedCLIP           Joint CBM p=0  BUS-BRA             False      0.8539     0.7340 -0.120 [-0.149, -0.090]
+BiomedCLIP           Joint CBM p=0 BUS-UCLM             False      0.9259     0.8395 -0.087 [-0.187, -0.001]
+BiomedCLIP           Joint CBM p=0     BUSB             False      0.9258     0.8411 -0.085 [-0.147, -0.020]
+BiomedCLIP           Joint CBM p=0   BrEaST             False      0.8379     0.7026 -0.135 [-0.194, -0.076]
+BiomedCLIP           Joint CBM p=0   pooled             False         NaN        NaN -0.107 [-0.140, -0.075]
+BiomedCLIP           Joint CBM p=0  BUS-BRA              True      0.8539     0.7626 -0.091 [-0.119, -0.061]
+BiomedCLIP           Joint CBM p=0 BUS-UCLM              True      0.9259     0.8368 -0.090 [-0.185, -0.010]
+BiomedCLIP           Joint CBM p=0     BUSB              True      0.9258     0.8530 -0.073 [-0.130, -0.013]
+BiomedCLIP           Joint CBM p=0   BrEaST              True      0.8379     0.7092 -0.129 [-0.186, -0.070]
+BiomedCLIP           Joint CBM p=0   pooled              True         NaN        NaN -0.096 [-0.128, -0.066]
+BiomedCLIP         Independent CBM  BUS-BRA             False      0.7769     0.7825 +0.006 [-0.015, +0.028]
+BiomedCLIP         Independent CBM BUS-UCLM             False      0.8578     0.8485 -0.011 [-0.048, +0.026]
+BiomedCLIP         Independent CBM     BUSB             False      0.8939     0.8510 -0.043 [-0.080, -0.011]
+BiomedCLIP         Independent CBM   BrEaST             False      0.7686     0.7145 -0.054 [-0.090, -0.020]
+BiomedCLIP         Independent CBM   pooled             False         NaN        NaN -0.025 [-0.042, -0.010]
+BiomedCLIP         Independent CBM  BUS-BRA              True      0.7769     0.7835 +0.007 [-0.013, +0.029]
+BiomedCLIP         Independent CBM BUS-UCLM              True      0.8578     0.8471 -0.012 [-0.047, +0.022]
+BiomedCLIP         Independent CBM     BUSB              True      0.8939     0.8551 -0.039 [-0.073, -0.008]
+BiomedCLIP         Independent CBM   BrEaST              True      0.7686     0.7128 -0.055 [-0.089, -0.023]
+BiomedCLIP         Independent CBM   pooled              True         NaN        NaN -0.025 [-0.040, -0.011]
+BiomedCLIP          Sequential CBM  BUS-BRA             False      0.7772     0.7843 +0.008 [-0.013, +0.030]
+BiomedCLIP          Sequential CBM BUS-UCLM             False      0.8593     0.8536 -0.007 [-0.046, +0.031]
+BiomedCLIP          Sequential CBM     BUSB             False      0.8967     0.8575 -0.039 [-0.077, -0.007]
+BiomedCLIP          Sequential CBM   BrEaST             False      0.7678     0.7117 -0.056 [-0.094, -0.021]
+BiomedCLIP          Sequential CBM   pooled             False         NaN        NaN -0.024 [-0.040, -0.008]
+BiomedCLIP          Sequential CBM  BUS-BRA              True      0.7772     0.7851 +0.008 [-0.012, +0.030]
+BiomedCLIP          Sequential CBM BUS-UCLM              True      0.8593     0.8484 -0.012 [-0.046, +0.021]
+BiomedCLIP          Sequential CBM     BUSB              True      0.8967     0.8592 -0.037 [-0.072, -0.007]
+BiomedCLIP          Sequential CBM   BrEaST              True      0.7678     0.7122 -0.055 [-0.090, -0.022]
+BiomedCLIP          Sequential CBM   pooled              True         NaN        NaN -0.024 [-0.039, -0.010]
+BiomedCLIP Hybrid CBM, penalty 0.1  BUS-BRA             False      0.8627     0.8689 +0.006 [-0.007, +0.019]
+BiomedCLIP Hybrid CBM, penalty 0.1 BUS-UCLM             False      0.9214     0.9126 -0.009 [-0.043, +0.021]
+BiomedCLIP Hybrid CBM, penalty 0.1     BUSB             False      0.9227     0.9001 -0.023 [-0.048, -0.001]
+BiomedCLIP Hybrid CBM, penalty 0.1   BrEaST             False      0.8574     0.8243 -0.033 [-0.058, -0.007]
+BiomedCLIP Hybrid CBM, penalty 0.1   pooled             False         NaN        NaN -0.015 [-0.027, -0.003]
+BiomedCLIP Hybrid CBM, penalty 0.1  BUS-BRA              True      0.8627     0.8762 +0.014 [+0.002, +0.025]
+BiomedCLIP Hybrid CBM, penalty 0.1 BUS-UCLM              True      0.9214     0.9126 -0.009 [-0.033, +0.011]
+BiomedCLIP Hybrid CBM, penalty 0.1     BUSB              True      0.9227     0.8998 -0.023 [-0.045, -0.005]
+BiomedCLIP Hybrid CBM, penalty 0.1   BrEaST              True      0.8574     0.8428 -0.015 [-0.034, +0.006]
+BiomedCLIP Hybrid CBM, penalty 0.1   pooled              True         NaN        NaN -0.008 [-0.018, +0.001]
+BiomedCLIP    Shuffled-concept CBM  BUS-BRA             False      0.8485     0.6200 -0.229 [-0.267, -0.190]
+BiomedCLIP    Shuffled-concept CBM BUS-UCLM             False      0.9123     0.6924 -0.222 [-0.362, -0.091]
+BiomedCLIP    Shuffled-concept CBM     BUSB             False      0.8886     0.6865 -0.202 [-0.307, -0.091]
+BiomedCLIP    Shuffled-concept CBM   BrEaST             False      0.8449     0.5915 -0.254 [-0.344, -0.166]
+BiomedCLIP    Shuffled-concept CBM   pooled             False         NaN        NaN -0.227 [-0.277, -0.178]
+BiomedCLIP    Shuffled-concept CBM  BUS-BRA              True      0.8485     0.6362 -0.212 [-0.250, -0.174]
+BiomedCLIP    Shuffled-concept CBM BUS-UCLM              True      0.9123     0.6697 -0.245 [-0.382, -0.114]
+BiomedCLIP    Shuffled-concept CBM     BUSB              True      0.8886     0.7288 -0.159 [-0.259, -0.052]
+BiomedCLIP    Shuffled-concept CBM   BrEaST              True      0.8449     0.5848 -0.260 [-0.350, -0.175]
+BiomedCLIP    Shuffled-concept CBM   pooled              True         NaN        NaN -0.219 [-0.268, -0.170]
+BiomedCLIP Shuffled-concept hybrid  BUS-BRA             False      0.8643     0.8643 -0.000 [-0.009, +0.009]
+BiomedCLIP Shuffled-concept hybrid BUS-UCLM             False      0.9050     0.9255 +0.021 [-0.015, +0.065]
+BiomedCLIP Shuffled-concept hybrid     BUSB             False      0.9000     0.9164 +0.016 [-0.012, +0.048]
+BiomedCLIP Shuffled-concept hybrid   BrEaST             False      0.8471     0.8412 -0.006 [-0.027, +0.016]
+BiomedCLIP Shuffled-concept hybrid   pooled             False         NaN        NaN +0.008 [-0.006, +0.022]
+BiomedCLIP Shuffled-concept hybrid  BUS-BRA              True      0.8643     0.8665 +0.002 [-0.003, +0.007]
+BiomedCLIP Shuffled-concept hybrid BUS-UCLM              True      0.9050     0.9155 +0.011 [-0.004, +0.033]
+BiomedCLIP Shuffled-concept hybrid     BUSB              True      0.9000     0.9130 +0.013 [-0.004, +0.034]
+BiomedCLIP Shuffled-concept hybrid   BrEaST              True      0.8471     0.8491 +0.002 [-0.010, +0.014]
+BiomedCLIP Shuffled-concept hybrid   pooled              True         NaN        NaN +0.007 [+0.000, +0.015]
+
+B2 EXCESS LOSS (change of A minus change of B, pooled) [95% CI]
+  backbone               A               B  rescaled_targets change_A_minus_change_B     p
+    DINOv2 Joint CBM p=0.5  Sequential CBM             False -0.074 [-0.099, -0.051] 0.000
+    DINOv2 Joint CBM p=0.5  Sequential CBM              True -0.072 [-0.096, -0.050] 0.000
+    DINOv2   Joint CBM p=0  Sequential CBM             False -0.091 [-0.119, -0.065] 0.000
+    DINOv2   Joint CBM p=0  Sequential CBM              True -0.080 [-0.105, -0.056] 0.000
+    DINOv2 Joint CBM p=0.5 Independent CBM             False -0.071 [-0.095, -0.049] 0.000
+    DINOv2 Joint CBM p=0.5 Independent CBM              True -0.070 [-0.092, -0.048] 0.000
+    DINOv2 Joint CBM p=0.5   Joint CBM p=0             False +0.017 [+0.004, +0.031] 0.005
+    DINOv2 Joint CBM p=0.5   Joint CBM p=0              True +0.008 [-0.003, +0.018] 0.165
+BiomedCLIP Joint CBM p=0.5  Sequential CBM             False -0.059 [-0.088, -0.032] 0.000
+BiomedCLIP Joint CBM p=0.5  Sequential CBM              True -0.054 [-0.081, -0.027] 0.000
+BiomedCLIP   Joint CBM p=0  Sequential CBM             False -0.083 [-0.110, -0.056] 0.000
+BiomedCLIP   Joint CBM p=0  Sequential CBM              True -0.071 [-0.098, -0.047] 0.000
+BiomedCLIP Joint CBM p=0.5 Independent CBM             False -0.058 [-0.085, -0.030] 0.000
+BiomedCLIP Joint CBM p=0.5 Independent CBM              True -0.054 [-0.081, -0.027] 0.000
+BiomedCLIP Joint CBM p=0.5   Joint CBM p=0             False +0.024 [+0.014, +0.034] 0.000
+BiomedCLIP Joint CBM p=0.5   Joint CBM p=0              True +0.017 [+0.008, +0.027] 0.000
+
+C  ERROR PROBE AUC (predicted minus MedSAM target), patient bootstrap [95% CI]
+  backbone                   model  heldout         error_probe_auc
+    DINOv2         Joint CBM p=0.5  BUS-BRA +0.731 [+0.703, +0.758]
+    DINOv2         Joint CBM p=0.5 BUS-UCLM +0.774 [+0.681, +0.848]
+    DINOv2         Joint CBM p=0.5     BUSB +0.712 [+0.616, +0.797]
+    DINOv2         Joint CBM p=0.5   BrEaST +0.773 [+0.709, +0.834]
+    DINOv2         Joint CBM p=0.5   pooled +0.748 [+0.711, +0.782]
+    DINOv2           Joint CBM p=0  BUS-BRA +0.784 [+0.758, +0.809]
+    DINOv2           Joint CBM p=0 BUS-UCLM +0.848 [+0.769, +0.910]
+    DINOv2           Joint CBM p=0     BUSB +0.814 [+0.734, +0.882]
+    DINOv2           Joint CBM p=0   BrEaST +0.781 [+0.716, +0.843]
+    DINOv2           Joint CBM p=0   pooled +0.807 [+0.774, +0.837]
+    DINOv2         Independent CBM  BUS-BRA +0.703 [+0.676, +0.732]
+    DINOv2         Independent CBM BUS-UCLM +0.620 [+0.515, +0.722]
+    DINOv2         Independent CBM     BUSB +0.721 [+0.622, +0.810]
+    DINOv2         Independent CBM   BrEaST +0.510 [+0.437, +0.582]
+    DINOv2         Independent CBM   pooled +0.638 [+0.599, +0.679]
+    DINOv2          Sequential CBM  BUS-BRA +0.664 [+0.633, +0.694]
+    DINOv2          Sequential CBM BUS-UCLM +0.609 [+0.502, +0.713]
+    DINOv2          Sequential CBM     BUSB +0.733 [+0.645, +0.815]
+    DINOv2          Sequential CBM   BrEaST +0.498 [+0.428, +0.569]
+    DINOv2          Sequential CBM   pooled +0.626 [+0.584, +0.665]
+    DINOv2 Hybrid CBM, penalty 0.1  BUS-BRA +0.688 [+0.659, +0.717]
+    DINOv2 Hybrid CBM, penalty 0.1 BUS-UCLM +0.660 [+0.536, +0.763]
+    DINOv2 Hybrid CBM, penalty 0.1     BUSB +0.716 [+0.629, +0.796]
+    DINOv2 Hybrid CBM, penalty 0.1   BrEaST +0.438 [+0.365, +0.507]
+    DINOv2 Hybrid CBM, penalty 0.1   pooled +0.625 [+0.583, +0.663]
+    DINOv2    Shuffled-concept CBM  BUS-BRA +0.820 [+0.796, +0.844]
+    DINOv2    Shuffled-concept CBM BUS-UCLM +0.916 [+0.853, +0.962]
+    DINOv2    Shuffled-concept CBM     BUSB +0.866 [+0.793, +0.935]
+    DINOv2    Shuffled-concept CBM   BrEaST +0.792 [+0.735, +0.844]
+    DINOv2    Shuffled-concept CBM   pooled +0.849 [+0.821, +0.875]
+    DINOv2 Shuffled-concept hybrid  BUS-BRA +0.810 [+0.784, +0.835]
+    DINOv2 Shuffled-concept hybrid BUS-UCLM +0.810 [+0.700, +0.892]
+    DINOv2 Shuffled-concept hybrid     BUSB +0.860 [+0.786, +0.926]
+    DINOv2 Shuffled-concept hybrid   BrEaST +0.670 [+0.600, +0.736]
+    DINOv2 Shuffled-concept hybrid   pooled +0.787 [+0.751, +0.821]
+    DINOv2 Hybrid CBM, penalty 1.0  BUS-BRA +0.713 [+0.684, +0.741]
+    DINOv2 Hybrid CBM, penalty 1.0 BUS-UCLM +0.610 [+0.470, +0.740]
+    DINOv2 Hybrid CBM, penalty 1.0     BUSB +0.711 [+0.624, +0.794]
+    DINOv2 Hybrid CBM, penalty 1.0   BrEaST +0.515 [+0.442, +0.583]
+    DINOv2 Hybrid CBM, penalty 1.0   pooled +0.637 [+0.591, +0.679]
+    DINOv2        Joint CBM p=0.25  BUS-BRA +0.774 [+0.747, +0.799]
+    DINOv2        Joint CBM p=0.25 BUS-UCLM +0.835 [+0.762, +0.896]
+    DINOv2        Joint CBM p=0.25     BUSB +0.754 [+0.660, +0.834]
+    DINOv2        Joint CBM p=0.25   BrEaST +0.747 [+0.681, +0.812]
+    DINOv2        Joint CBM p=0.25   pooled +0.777 [+0.744, +0.811]
+    DINOv2        Joint CBM p=0.75  BUS-BRA +0.721 [+0.692, +0.748]
+    DINOv2        Joint CBM p=0.75 BUS-UCLM +0.784 [+0.697, +0.858]
+    DINOv2        Joint CBM p=0.75     BUSB +0.753 [+0.662, +0.840]
+    DINOv2        Joint CBM p=0.75   BrEaST +0.802 [+0.743, +0.859]
+    DINOv2        Joint CBM p=0.75   pooled +0.765 [+0.729, +0.799]
+    DINOv2         Joint CBM p=1.0  BUS-BRA +0.712 [+0.684, +0.740]
+    DINOv2         Joint CBM p=1.0 BUS-UCLM +0.605 [+0.487, +0.716]
+    DINOv2         Joint CBM p=1.0     BUSB +0.693 [+0.599, +0.782]
+    DINOv2         Joint CBM p=1.0   BrEaST +0.672 [+0.601, +0.740]
+    DINOv2         Joint CBM p=1.0   pooled +0.671 [+0.627, +0.712]
+BiomedCLIP         Joint CBM p=0.5  BUS-BRA +0.728 [+0.702, +0.754]
+BiomedCLIP         Joint CBM p=0.5 BUS-UCLM +0.745 [+0.631, +0.833]
+BiomedCLIP         Joint CBM p=0.5     BUSB +0.818 [+0.736, +0.891]
+BiomedCLIP         Joint CBM p=0.5   BrEaST +0.802 [+0.743, +0.857]
+BiomedCLIP         Joint CBM p=0.5   pooled +0.773 [+0.737, +0.809]
+BiomedCLIP           Joint CBM p=0  BUS-BRA +0.798 [+0.774, +0.823]
+BiomedCLIP           Joint CBM p=0 BUS-UCLM +0.812 [+0.725, +0.884]
+BiomedCLIP           Joint CBM p=0     BUSB +0.832 [+0.750, +0.910]
+BiomedCLIP           Joint CBM p=0   BrEaST +0.764 [+0.703, +0.822]
+BiomedCLIP           Joint CBM p=0   pooled +0.802 [+0.769, +0.834]
+BiomedCLIP         Independent CBM  BUS-BRA +0.673 [+0.644, +0.704]
+BiomedCLIP         Independent CBM BUS-UCLM +0.674 [+0.552, +0.780]
+BiomedCLIP         Independent CBM     BUSB +0.727 [+0.636, +0.810]
+BiomedCLIP         Independent CBM   BrEaST +0.632 [+0.562, +0.701]
+BiomedCLIP         Independent CBM   pooled +0.676 [+0.635, +0.715]
+BiomedCLIP          Sequential CBM  BUS-BRA +0.673 [+0.644, +0.704]
+BiomedCLIP          Sequential CBM BUS-UCLM +0.651 [+0.531, +0.762]
+BiomedCLIP          Sequential CBM     BUSB +0.727 [+0.636, +0.810]
+BiomedCLIP          Sequential CBM   BrEaST +0.632 [+0.562, +0.701]
+BiomedCLIP          Sequential CBM   pooled +0.671 [+0.631, +0.709]
+BiomedCLIP Hybrid CBM, penalty 0.1  BUS-BRA +0.671 [+0.642, +0.701]
+BiomedCLIP Hybrid CBM, penalty 0.1 BUS-UCLM +0.606 [+0.477, +0.726]
+BiomedCLIP Hybrid CBM, penalty 0.1     BUSB +0.723 [+0.631, +0.807]
+BiomedCLIP Hybrid CBM, penalty 0.1   BrEaST +0.623 [+0.553, +0.691]
+BiomedCLIP Hybrid CBM, penalty 0.1   pooled +0.656 [+0.613, +0.696]
+BiomedCLIP    Shuffled-concept CBM  BUS-BRA +0.860 [+0.839, +0.882]
+BiomedCLIP    Shuffled-concept CBM BUS-UCLM +0.868 [+0.779, +0.934]
+BiomedCLIP    Shuffled-concept CBM     BUSB +0.874 [+0.798, +0.942]
+BiomedCLIP    Shuffled-concept CBM   BrEaST +0.802 [+0.744, +0.857]
+BiomedCLIP    Shuffled-concept CBM   pooled +0.851 [+0.819, +0.881]
+BiomedCLIP Shuffled-concept hybrid  BUS-BRA +0.789 [+0.764, +0.815]
+BiomedCLIP Shuffled-concept hybrid BUS-UCLM +0.783 [+0.661, +0.875]
+BiomedCLIP Shuffled-concept hybrid     BUSB +0.857 [+0.785, +0.926]
+BiomedCLIP Shuffled-concept hybrid   BrEaST +0.676 [+0.607, +0.741]
+BiomedCLIP Shuffled-concept hybrid   pooled +0.776 [+0.738, +0.811]
+BiomedCLIP Hybrid CBM, penalty 1.0  BUS-BRA +0.666 [+0.638, +0.696]
+BiomedCLIP Hybrid CBM, penalty 1.0 BUS-UCLM +0.647 [+0.522, +0.762]
+BiomedCLIP Hybrid CBM, penalty 1.0     BUSB +0.727 [+0.634, +0.806]
+BiomedCLIP Hybrid CBM, penalty 1.0   BrEaST +0.631 [+0.560, +0.699]
+BiomedCLIP Hybrid CBM, penalty 1.0   pooled +0.668 [+0.626, +0.708]
+BiomedCLIP        Joint CBM p=0.25  BUS-BRA +0.768 [+0.742, +0.793]
+BiomedCLIP        Joint CBM p=0.25 BUS-UCLM +0.746 [+0.638, +0.835]
+BiomedCLIP        Joint CBM p=0.25     BUSB +0.768 [+0.681, +0.846]
+BiomedCLIP        Joint CBM p=0.25   BrEaST +0.788 [+0.727, +0.844]
+BiomedCLIP        Joint CBM p=0.25   pooled +0.767 [+0.730, +0.803]
+
+D  FAIR CORRECTION BASELINE (black box with measured concepts as input)
+  backbone                                                                               contrast BUS-BRA BUS-UCLM   BUSB BrEaST                  pooled     p
+    DINOv2                              measured-concept black box (MedSAM input) minus black box  +0.014   -0.016 +0.002 +0.011 +0.002 [-0.005, +0.010] 0.513
+    DINOv2                         measured-concept black box (radiologist input) minus black box  +0.017   -0.017 +0.004 +0.011 +0.004 [-0.004, +0.011] 0.318
+    DINOv2 Hybrid CBM, penalty 0.1 corrected minus measured-concept black box (radiologist input)  -0.024   +0.008 -0.004 -0.024 -0.011 [-0.024, +0.003] 0.118
+    DINOv2    Hybrid CBM, penalty 0.1 uncorrected minus measured-concept black box (MedSAM input)  -0.027   -0.008 +0.003 -0.030 -0.016 [-0.026, -0.005] 0.003
+    DINOv2 Shuffled-concept hybrid corrected minus measured-concept black box (radiologist input)  -0.037   +0.001 -0.029 +0.000 -0.016 [-0.029, -0.004] 0.014
+    DINOv2    Shuffled-concept hybrid uncorrected minus measured-concept black box (MedSAM input)  -0.024   -0.001 -0.012 -0.001 -0.009 [-0.019, +0.000] 0.060
+    DINOv2          Sequential CBM corrected minus measured-concept black box (radiologist input)  -0.040   -0.017 -0.055 -0.118 -0.057 [-0.080, -0.034] 0.000
+    DINOv2             Sequential CBM uncorrected minus measured-concept black box (MedSAM input)  -0.104   -0.071 -0.040 -0.128 -0.086 [-0.110, -0.063] 0.000
+    DINOv2         Joint CBM p=0.5 corrected minus measured-concept black box (radiologist input)  -0.075   -0.017 -0.065 -0.124 -0.070 [-0.095, -0.044] 0.000
+    DINOv2            Joint CBM p=0.5 uncorrected minus measured-concept black box (MedSAM input)  -0.049   +0.011 +0.001 -0.015 -0.013 [-0.022, -0.004] 0.007
+BiomedCLIP                              measured-concept black box (MedSAM input) minus black box  +0.004   -0.002 -0.003 -0.002 -0.001 [-0.009, +0.008] 0.888
+BiomedCLIP                         measured-concept black box (radiologist input) minus black box  +0.008   -0.001 -0.002 +0.001 +0.002 [-0.007, +0.010] 0.670
+BiomedCLIP Hybrid CBM, penalty 0.1 corrected minus measured-concept black box (radiologist input)  +0.037   +0.048 -0.010 -0.009 +0.017 [+0.002, +0.033] 0.032
+BiomedCLIP    Hybrid CBM, penalty 0.1 uncorrected minus measured-concept black box (MedSAM input)  -0.008   +0.022 -0.003 -0.001 +0.003 [-0.009, +0.016] 0.683
+BiomedCLIP Shuffled-concept hybrid corrected minus measured-concept black box (radiologist input)  -0.003   +0.036 -0.014 -0.007 +0.003 [-0.012, +0.018] 0.693
+BiomedCLIP    Shuffled-concept hybrid uncorrected minus measured-concept black box (MedSAM input)  -0.006   +0.006 -0.025 -0.011 -0.009 [-0.022, +0.004] 0.172
+BiomedCLIP          Sequential CBM corrected minus measured-concept black box (radiologist input)  -0.015   +0.026 -0.059 -0.114 -0.040 [-0.067, -0.014] 0.002
+BiomedCLIP             Sequential CBM uncorrected minus measured-concept black box (MedSAM input)  -0.094   -0.040 -0.029 -0.091 -0.063 [-0.089, -0.037] 0.000
+BiomedCLIP         Joint CBM p=0.5 corrected minus measured-concept black box (radiologist input)  -0.038   +0.016 -0.075 -0.109 -0.052 [-0.083, -0.021] 0.000
+BiomedCLIP            Joint CBM p=0.5 uncorrected minus measured-concept black box (MedSAM input)  -0.035   +0.013 -0.016 -0.004 -0.011 [-0.023, +0.001] 0.080
+
+E  SECONDARY OUTCOMES, pooled [95% CI], and difference to the black box
+  backbone                            model                  auc                  ece     ece_minus_black_box                brier   brier_minus_black_box               spec90  spec90_minus_black_box               spec85  spec85_minus_black_box
+    DINOv2                        Black box 0.908 [0.887, 0.928] 0.139 [0.120, 0.162] +0.000 [+0.000, +0.000] 0.138 [0.120, 0.158] +0.000 [+0.000, +0.000] 0.703 [0.583, 0.794] +0.000 [+0.000, +0.000] 0.806 [0.713, 0.870] +0.000 [+0.000, +0.000]
+    DINOv2              Multitask black box 0.909 [0.887, 0.928] 0.121 [0.103, 0.141] -0.019 [-0.030, -0.007] 0.128 [0.112, 0.147] -0.010 [-0.018, -0.001] 0.724 [0.591, 0.809] +0.021 [-0.031, +0.068] 0.820 [0.742, 0.870] +0.014 [-0.024, +0.054]
+    DINOv2                 Joint CBM p=0.25 0.905 [0.882, 0.924] 0.165 [0.145, 0.186] +0.026 [+0.006, +0.045] 0.143 [0.129, 0.160] +0.005 [-0.004, +0.015] 0.708 [0.593, 0.792] +0.005 [-0.071, +0.079] 0.813 [0.735, 0.869] +0.006 [-0.048, +0.066]
+    DINOv2                  Joint CBM p=0.5 0.898 [0.875, 0.918] 0.162 [0.144, 0.182] +0.023 [+0.002, +0.043] 0.140 [0.127, 0.155] +0.002 [-0.007, +0.011] 0.703 [0.551, 0.785] +0.000 [-0.065, +0.073] 0.799 [0.738, 0.848] -0.007 [-0.058, +0.061]
+    DINOv2                 Joint CBM p=0.75 0.884 [0.860, 0.906] 0.182 [0.162, 0.204] +0.042 [+0.017, +0.063] 0.156 [0.143, 0.171] +0.018 [+0.007, +0.028] 0.672 [0.565, 0.758] -0.031 [-0.120, +0.050] 0.771 [0.699, 0.829] -0.035 [-0.101, +0.033]
+    DINOv2                  Joint CBM p=1.0 0.847 [0.819, 0.873] 0.193 [0.172, 0.216] +0.053 [+0.025, +0.083] 0.181 [0.169, 0.193] +0.042 [+0.029, +0.055] 0.549 [0.469, 0.627] -0.154 [-0.244, -0.060] 0.636 [0.567, 0.715] -0.170 [-0.243, -0.084]
+    DINOv2   Joint CBM, 6 geometry concepts 0.885 [0.861, 0.905] 0.151 [0.131, 0.169] +0.011 [-0.012, +0.034] 0.143 [0.131, 0.155] +0.004 [-0.007, +0.014] 0.662 [0.563, 0.736] -0.041 [-0.114, +0.044] 0.756 [0.689, 0.815] -0.050 [-0.108, +0.012]
+    DINOv2             Shuffled-concept CBM 0.883 [0.859, 0.906] 0.177 [0.157, 0.200] +0.038 [+0.011, +0.064] 0.156 [0.142, 0.170] +0.018 [+0.009, +0.027] 0.637 [0.515, 0.726] -0.066 [-0.132, -0.002] 0.740 [0.660, 0.813] -0.066 [-0.125, -0.010]
+    DINOv2                   Sequential CBM 0.825 [0.793, 0.853] 0.160 [0.136, 0.190] +0.021 [-0.010, +0.051] 0.177 [0.163, 0.191] +0.039 [+0.023, +0.053] 0.513 [0.400, 0.626] -0.190 [-0.297, -0.081] 0.633 [0.527, 0.712] -0.174 [-0.259, -0.083]
+    DINOv2          Hybrid CBM, penalty 0.1 0.895 [0.872, 0.916] 0.171 [0.148, 0.195] +0.031 [+0.003, +0.057] 0.146 [0.134, 0.159] +0.008 [-0.003, +0.018] 0.707 [0.567, 0.793] +0.004 [-0.086, +0.092] 0.807 [0.719, 0.860] +0.001 [-0.054, +0.066]
+    DINOv2          Hybrid CBM, penalty 1.0 0.857 [0.830, 0.881] 0.168 [0.145, 0.190] +0.028 [+0.001, +0.054] 0.167 [0.156, 0.181] +0.029 [+0.015, +0.041] 0.595 [0.492, 0.680] -0.108 [-0.197, -0.017] 0.688 [0.604, 0.760] -0.118 [-0.189, -0.036]
+    DINOv2          Shuffled-concept hybrid 0.901 [0.880, 0.921] 0.187 [0.167, 0.209] +0.047 [+0.019, +0.074] 0.147 [0.137, 0.157] +0.008 [-0.004, +0.021] 0.683 [0.549, 0.769] -0.020 [-0.092, +0.051] 0.784 [0.709, 0.850] -0.022 [-0.073, +0.036]
+    DINOv2       Shuffled-concept multitask 0.905 [0.882, 0.925] 0.137 [0.119, 0.159] -0.003 [-0.015, +0.009] 0.139 [0.123, 0.159] +0.001 [-0.009, +0.010] 0.715 [0.601, 0.795] +0.012 [-0.042, +0.065] 0.802 [0.730, 0.859] -0.004 [-0.045, +0.045]
+    DINOv2                    Joint CBM p=0 0.898 [0.875, 0.919] 0.123 [0.104, 0.141] -0.017 [-0.036, +0.003] 0.126 [0.112, 0.142] -0.013 [-0.020, -0.004] 0.692 [0.553, 0.779] -0.010 [-0.070, +0.064] 0.803 [0.734, 0.860] -0.003 [-0.054, +0.056]
+    DINOv2                  Independent CBM 0.825 [0.794, 0.853] 0.179 [0.156, 0.208] +0.040 [+0.009, +0.072] 0.181 [0.169, 0.194] +0.043 [+0.028, +0.057] 0.500 [0.395, 0.620] -0.203 [-0.306, -0.091] 0.619 [0.502, 0.714] -0.187 [-0.287, -0.089]
+    DINOv2 Black box with measured concepts 0.911 [0.888, 0.931] 0.118 [0.100, 0.137] -0.022 [-0.035, -0.011] 0.125 [0.108, 0.142] -0.014 [-0.024, -0.004] 0.728 [0.594, 0.825] +0.026 [-0.036, +0.096] 0.833 [0.721, 0.885] +0.026 [-0.023, +0.086]
+BiomedCLIP                        Black box 0.889 [0.864, 0.910] 0.134 [0.114, 0.155] +0.000 [+0.000, +0.000] 0.142 [0.125, 0.160] +0.000 [+0.000, +0.000] 0.661 [0.564, 0.764] +0.000 [+0.000, +0.000] 0.756 [0.670, 0.829] +0.000 [+0.000, +0.000]
+BiomedCLIP              Multitask black box 0.897 [0.875, 0.917] 0.127 [0.109, 0.148] -0.007 [-0.021, +0.006] 0.136 [0.120, 0.154] -0.006 [-0.014, +0.002] 0.677 [0.564, 0.766] +0.016 [-0.043, +0.083] 0.773 [0.688, 0.845] +0.018 [-0.034, +0.069]
+BiomedCLIP                 Joint CBM p=0.25 0.881 [0.857, 0.904] 0.136 [0.117, 0.156] +0.002 [-0.021, +0.027] 0.140 [0.126, 0.154] -0.002 [-0.012, +0.008] 0.599 [0.475, 0.733] -0.062 [-0.146, +0.019] 0.736 [0.613, 0.833] -0.020 [-0.104, +0.042]
+BiomedCLIP                  Joint CBM p=0.5 0.877 [0.853, 0.901] 0.133 [0.115, 0.154] -0.001 [-0.021, +0.022] 0.139 [0.125, 0.155] -0.002 [-0.012, +0.006] 0.611 [0.464, 0.716] -0.050 [-0.159, +0.035] 0.731 [0.630, 0.819] -0.025 [-0.092, +0.038]
+BiomedCLIP   Joint CBM, 6 geometry concepts 0.876 [0.851, 0.898] 0.190 [0.169, 0.213] +0.056 [+0.025, +0.087] 0.156 [0.145, 0.167] +0.014 [+0.001, +0.027] 0.601 [0.491, 0.710] -0.060 [-0.156, +0.024] 0.734 [0.652, 0.824] -0.021 [-0.094, +0.048]
+BiomedCLIP             Shuffled-concept CBM 0.873 [0.847, 0.898] 0.140 [0.121, 0.161] +0.006 [-0.018, +0.030] 0.144 [0.131, 0.160] +0.003 [-0.007, +0.012] 0.601 [0.491, 0.723] -0.060 [-0.155, +0.032] 0.731 [0.616, 0.822] -0.024 [-0.125, +0.055]
+BiomedCLIP                   Sequential CBM 0.825 [0.794, 0.853] 0.160 [0.136, 0.187] +0.026 [-0.007, +0.058] 0.174 [0.161, 0.185] +0.032 [+0.015, +0.048] 0.498 [0.394, 0.597] -0.163 [-0.268, -0.054] 0.604 [0.505, 0.699] -0.152 [-0.252, -0.044]
+BiomedCLIP          Hybrid CBM, penalty 0.1 0.891 [0.869, 0.911] 0.165 [0.145, 0.186] +0.031 [-0.000, +0.060] 0.145 [0.134, 0.157] +0.004 [-0.009, +0.015] 0.667 [0.545, 0.753] +0.006 [-0.068, +0.073] 0.772 [0.688, 0.849] +0.016 [-0.048, +0.074]
+BiomedCLIP          Hybrid CBM, penalty 1.0 0.859 [0.833, 0.881] 0.155 [0.133, 0.181] +0.021 [-0.014, +0.054] 0.161 [0.150, 0.173] +0.020 [+0.003, +0.034] 0.590 [0.491, 0.678] -0.071 [-0.173, +0.034] 0.687 [0.596, 0.763] -0.068 [-0.160, +0.032]
+BiomedCLIP          Shuffled-concept hybrid 0.879 [0.853, 0.903] 0.189 [0.169, 0.211] +0.055 [+0.023, +0.084] 0.156 [0.146, 0.167] +0.014 [+0.002, +0.025] 0.620 [0.507, 0.736] -0.041 [-0.118, +0.032] 0.737 [0.624, 0.828] -0.019 [-0.086, +0.038]
+BiomedCLIP       Shuffled-concept multitask 0.896 [0.874, 0.916] 0.124 [0.104, 0.144] -0.010 [-0.025, +0.003] 0.134 [0.118, 0.155] -0.007 [-0.016, +0.002] 0.683 [0.548, 0.763] +0.022 [-0.053, +0.093] 0.782 [0.702, 0.843] +0.026 [-0.025, +0.083]
+BiomedCLIP                    Joint CBM p=0 0.885 [0.863, 0.907] 0.133 [0.115, 0.154] -0.001 [-0.025, +0.025] 0.137 [0.125, 0.152] -0.004 [-0.013, +0.005] 0.640 [0.528, 0.740] -0.021 [-0.095, +0.050] 0.755 [0.658, 0.834] -0.001 [-0.070, +0.061]
+BiomedCLIP                  Independent CBM 0.824 [0.792, 0.852] 0.168 [0.144, 0.196] +0.034 [+0.000, +0.066] 0.177 [0.167, 0.188] +0.036 [+0.018, +0.051] 0.495 [0.391, 0.594] -0.166 [-0.269, -0.060] 0.596 [0.502, 0.691] -0.159 [-0.254, -0.055]
+BiomedCLIP Black box with measured concepts 0.888 [0.864, 0.910] 0.124 [0.105, 0.145] -0.010 [-0.026, +0.004] 0.137 [0.120, 0.156] -0.004 [-0.013, +0.004] 0.671 [0.544, 0.765] +0.010 [-0.074, +0.077] 0.768 [0.688, 0.831] +0.012 [-0.038, +0.066]
+
+F  CONCEPT SHARE OF THE HYBRIDS (seed ensemble), pooled [95% CI], range over seeds
+  backbone                   model                   kappa                  rho kappa_seed_range
+    DINOv2 Hybrid CBM, penalty 0.1    0.537 [0.517, 0.556] 0.542 [0.513, 0.569]   0.456 to 0.627
+    DINOv2 Hybrid CBM, penalty 1.0    0.936 [0.928, 0.942] 0.977 [0.974, 0.979]   0.868 to 0.961
+    DINOv2 Shuffled-concept hybrid -0.007 [-0.010, -0.004] 0.002 [0.002, 0.002]  -0.019 to 0.000
+BiomedCLIP Hybrid CBM, penalty 0.1    0.568 [0.545, 0.589] 0.597 [0.564, 0.625]   0.475 to 0.617
+BiomedCLIP Hybrid CBM, penalty 1.0    0.937 [0.928, 0.945] 0.979 [0.975, 0.981]   0.891 to 0.959
+BiomedCLIP Shuffled-concept hybrid    0.019 [0.011, 0.027] 0.015 [0.014, 0.017]   0.013 to 0.052
+
+G  EXPLORATORY CONTRASTS WITH BOOTSTRAP p AND HOLM ADJUSTMENT (within encoder)
+  backbone          family                                                                                     contrast                  pooled     p  p_holm
+    DINOv2        ablation                         Joint CBM p=0.5 minus Joint CBM, 6 geometry concepts (echo concepts) +0.013 [+0.004, +0.022] 0.000   0.000
+    DINOv2        ablation                      Joint CBM p=0.5 minus Shuffled-concept CBM (named vs shuffled concepts) +0.015 [+0.005, +0.025] 0.002   0.044
+    DINOv2        ablation               Hybrid CBM, penalty 0.1 minus Sequential CBM (residual over faithful concepts) +0.071 [+0.051, +0.093] 0.000   0.000
+    DINOv2        ablation  Hybrid CBM, penalty 0.1 minus Hybrid CBM, penalty 1.0 (weaker vs stronger residual penalty) +0.038 [+0.025, +0.052] 0.000   0.000
+    DINOv2        ablation                       Joint CBM p=0.5 minus Joint CBM p=0.25 (intervention rate 0.5 vs 0.25) -0.007 [-0.013, +0.000] 0.058   0.696
+    DINOv2        ablation                          Hybrid CBM, penalty 0.1 minus Joint CBM p=0.5 (hybrid vs joint CBM) -0.003 [-0.012, +0.006] 0.536   1.000
+    DINOv2        ablation   Hybrid CBM, penalty 0.1 minus Shuffled-concept hybrid (hybrid, named vs shuffled concepts) -0.006 [-0.016, +0.004] 0.214   1.000
+    DINOv2        ablation Multitask black box minus Shuffled-concept multitask (multitask, named vs shuffled concepts) +0.003 [-0.004, +0.010] 0.368   1.000
+    DINOv2      correction                         Hybrid CBM, penalty 0.1 corrected with radiologist minus uncorrected +0.006 [-0.004, +0.017] 0.233   1.000
+    DINOv2      correction                           Hybrid CBM, penalty 0.1 corrected with radiologist minus black box -0.007 [-0.020, +0.006] 0.291   1.000
+    DINOv2      correction                              Hybrid CBM, penalty 0.1 corrected with MedSAM minus uncorrected -0.018 [-0.030, -0.006] 0.002   0.044
+    DINOv2      correction                                Hybrid CBM, penalty 0.1 corrected with MedSAM minus black box -0.031 [-0.046, -0.016] 0.000   0.000
+    DINOv2      correction                         Shuffled-concept hybrid corrected with radiologist minus uncorrected -0.005 [-0.016, +0.004] 0.261   1.000
+    DINOv2      correction                           Shuffled-concept hybrid corrected with radiologist minus black box -0.012 [-0.026, -0.000] 0.046   0.598
+    DINOv2      correction                              Shuffled-concept hybrid corrected with MedSAM minus uncorrected -0.016 [-0.029, -0.006] 0.004   0.072
+    DINOv2      correction                                Shuffled-concept hybrid corrected with MedSAM minus black box -0.023 [-0.039, -0.009] 0.002   0.044
+    DINOv2      correction                                 Joint CBM p=0.5 corrected with radiologist minus uncorrected -0.056 [-0.079, -0.032] 0.000   0.000
+    DINOv2      correction                                   Joint CBM p=0.5 corrected with radiologist minus black box -0.066 [-0.090, -0.042] 0.000   0.000
+    DINOv2      correction                                      Joint CBM p=0.5 corrected with MedSAM minus uncorrected -0.094 [-0.122, -0.069] 0.000   0.000
+    DINOv2      correction                                        Joint CBM p=0.5 corrected with MedSAM minus black box -0.105 [-0.133, -0.077] 0.000   0.000
+    DINOv2      correction                                  Sequential CBM corrected with radiologist minus uncorrected +0.030 [+0.013, +0.049] 0.001   0.023
+    DINOv2      correction                                    Sequential CBM corrected with radiologist minus black box -0.054 [-0.075, -0.032] 0.000   0.000
+    DINOv2      correction                                       Sequential CBM corrected with MedSAM minus uncorrected -0.020 [-0.035, -0.007] 0.005   0.085
+    DINOv2      correction                                         Sequential CBM corrected with MedSAM minus black box -0.104 [-0.130, -0.078] 0.000   0.000
+    DINOv2         leakage                                        Joint CBM p=0.5 minus Sequential CBM (rescaled False) -0.074 [-0.099, -0.051] 0.000   0.000
+    DINOv2         leakage                                         Joint CBM p=0.5 minus Sequential CBM (rescaled True) -0.072 [-0.096, -0.050] 0.000   0.000
+    DINOv2         leakage                                          Joint CBM p=0 minus Sequential CBM (rescaled False) -0.091 [-0.119, -0.065] 0.000   0.000
+    DINOv2         leakage                                           Joint CBM p=0 minus Sequential CBM (rescaled True) -0.080 [-0.105, -0.056] 0.000   0.000
+    DINOv2         leakage                                       Joint CBM p=0.5 minus Independent CBM (rescaled False) -0.071 [-0.095, -0.049] 0.000   0.000
+    DINOv2         leakage                                        Joint CBM p=0.5 minus Independent CBM (rescaled True) -0.070 [-0.092, -0.048] 0.000   0.000
+    DINOv2         leakage                                         Joint CBM p=0.5 minus Joint CBM p=0 (rescaled False) +0.017 [+0.004, +0.031] 0.005   0.085
+    DINOv2         leakage                                          Joint CBM p=0.5 minus Joint CBM p=0 (rescaled True) +0.008 [-0.003, +0.018] 0.165   1.000
+    DINOv2 fair correction                                    measured-concept black box (MedSAM input) minus black box +0.002 [-0.005, +0.010] 0.513   1.000
+    DINOv2 fair correction                               measured-concept black box (radiologist input) minus black box +0.004 [-0.004, +0.011] 0.318   1.000
+    DINOv2 fair correction       Hybrid CBM, penalty 0.1 corrected minus measured-concept black box (radiologist input) -0.011 [-0.024, +0.003] 0.118   1.000
+    DINOv2 fair correction          Hybrid CBM, penalty 0.1 uncorrected minus measured-concept black box (MedSAM input) -0.016 [-0.026, -0.005] 0.003   0.057
+    DINOv2 fair correction       Shuffled-concept hybrid corrected minus measured-concept black box (radiologist input) -0.016 [-0.029, -0.004] 0.014   0.196
+    DINOv2 fair correction          Shuffled-concept hybrid uncorrected minus measured-concept black box (MedSAM input) -0.009 [-0.019, +0.000] 0.060   0.696
+    DINOv2 fair correction                Sequential CBM corrected minus measured-concept black box (radiologist input) -0.057 [-0.080, -0.034] 0.000   0.000
+    DINOv2 fair correction                   Sequential CBM uncorrected minus measured-concept black box (MedSAM input) -0.086 [-0.110, -0.063] 0.000   0.000
+    DINOv2 fair correction               Joint CBM p=0.5 corrected minus measured-concept black box (radiologist input) -0.070 [-0.095, -0.044] 0.000   0.000
+    DINOv2 fair correction                  Joint CBM p=0.5 uncorrected minus measured-concept black box (MedSAM input) -0.013 [-0.022, -0.004] 0.007   0.105
+BiomedCLIP        ablation                         Joint CBM p=0.5 minus Joint CBM, 6 geometry concepts (echo concepts) +0.001 [-0.009, +0.012] 0.788   1.000
+BiomedCLIP        ablation                      Joint CBM p=0.5 minus Shuffled-concept CBM (named vs shuffled concepts) +0.004 [-0.005, +0.014] 0.377   1.000
+BiomedCLIP        ablation               Hybrid CBM, penalty 0.1 minus Sequential CBM (residual over faithful concepts) +0.066 [+0.046, +0.089] 0.000   0.000
+BiomedCLIP        ablation  Hybrid CBM, penalty 0.1 minus Hybrid CBM, penalty 1.0 (weaker vs stronger residual penalty) +0.032 [+0.017, +0.046] 0.000   0.000
+BiomedCLIP        ablation                       Joint CBM p=0.5 minus Joint CBM p=0.25 (intervention rate 0.5 vs 0.25) -0.004 [-0.010, +0.003] 0.262   1.000
+BiomedCLIP        ablation                          Hybrid CBM, penalty 0.1 minus Joint CBM p=0.5 (hybrid vs joint CBM) +0.013 [+0.003, +0.025] 0.009   0.198
+BiomedCLIP        ablation   Hybrid CBM, penalty 0.1 minus Shuffled-concept hybrid (hybrid, named vs shuffled concepts) +0.012 [+0.002, +0.023] 0.023   0.391
+BiomedCLIP        ablation Multitask black box minus Shuffled-concept multitask (multitask, named vs shuffled concepts) +0.001 [-0.003, +0.006] 0.578   1.000
+BiomedCLIP      correction                         Hybrid CBM, penalty 0.1 corrected with radiologist minus uncorrected +0.016 [+0.005, +0.028] 0.001   0.027
+BiomedCLIP      correction                           Hybrid CBM, penalty 0.1 corrected with radiologist minus black box +0.018 [+0.004, +0.034] 0.013   0.260
+BiomedCLIP      correction                              Hybrid CBM, penalty 0.1 corrected with MedSAM minus uncorrected -0.015 [-0.027, -0.003] 0.016   0.288
+BiomedCLIP      correction                                Hybrid CBM, penalty 0.1 corrected with MedSAM minus black box -0.013 [-0.029, +0.005] 0.131   1.000
+BiomedCLIP      correction                         Shuffled-concept hybrid corrected with radiologist minus uncorrected +0.015 [+0.002, +0.028] 0.023   0.391
+BiomedCLIP      correction                           Shuffled-concept hybrid corrected with radiologist minus black box +0.005 [-0.008, +0.019] 0.500   1.000
+BiomedCLIP      correction                              Shuffled-concept hybrid corrected with MedSAM minus uncorrected +0.008 [-0.006, +0.022] 0.269   1.000
+BiomedCLIP      correction                                Shuffled-concept hybrid corrected with MedSAM minus black box -0.002 [-0.016, +0.012] 0.738   1.000
+BiomedCLIP      correction                                 Joint CBM p=0.5 corrected with radiologist minus uncorrected -0.039 [-0.071, -0.008] 0.014   0.266
+BiomedCLIP      correction                                   Joint CBM p=0.5 corrected with radiologist minus black box -0.050 [-0.082, -0.019] 0.002   0.052
+BiomedCLIP      correction                                      Joint CBM p=0.5 corrected with MedSAM minus uncorrected -0.083 [-0.116, -0.051] 0.000   0.000
+BiomedCLIP      correction                                        Joint CBM p=0.5 corrected with MedSAM minus black box -0.094 [-0.127, -0.061] 0.000   0.000
+BiomedCLIP      correction                                  Sequential CBM corrected with radiologist minus uncorrected +0.025 [+0.006, +0.045] 0.011   0.231
+BiomedCLIP      correction                                    Sequential CBM corrected with radiologist minus black box -0.039 [-0.065, -0.013] 0.005   0.120
+BiomedCLIP      correction                                       Sequential CBM corrected with MedSAM minus uncorrected -0.024 [-0.040, -0.008] 0.007   0.161
+BiomedCLIP      correction                                         Sequential CBM corrected with MedSAM minus black box -0.088 [-0.118, -0.058] 0.000   0.000
+BiomedCLIP         leakage                                        Joint CBM p=0.5 minus Sequential CBM (rescaled False) -0.059 [-0.088, -0.032] 0.000   0.000
+BiomedCLIP         leakage                                         Joint CBM p=0.5 minus Sequential CBM (rescaled True) -0.054 [-0.081, -0.027] 0.000   0.000
+BiomedCLIP         leakage                                          Joint CBM p=0 minus Sequential CBM (rescaled False) -0.083 [-0.110, -0.056] 0.000   0.000
+BiomedCLIP         leakage                                           Joint CBM p=0 minus Sequential CBM (rescaled True) -0.071 [-0.098, -0.047] 0.000   0.000
+BiomedCLIP         leakage                                       Joint CBM p=0.5 minus Independent CBM (rescaled False) -0.058 [-0.085, -0.030] 0.000   0.000
+BiomedCLIP         leakage                                        Joint CBM p=0.5 minus Independent CBM (rescaled True) -0.054 [-0.081, -0.027] 0.000   0.000
+BiomedCLIP         leakage                                         Joint CBM p=0.5 minus Joint CBM p=0 (rescaled False) +0.024 [+0.014, +0.034] 0.000   0.000
+BiomedCLIP         leakage                                          Joint CBM p=0.5 minus Joint CBM p=0 (rescaled True) +0.017 [+0.008, +0.027] 0.000   0.000
+BiomedCLIP fair correction                                    measured-concept black box (MedSAM input) minus black box -0.001 [-0.009, +0.008] 0.888   1.000
+BiomedCLIP fair correction                               measured-concept black box (radiologist input) minus black box +0.002 [-0.007, +0.010] 0.670   1.000
+BiomedCLIP fair correction       Hybrid CBM, penalty 0.1 corrected minus measured-concept black box (radiologist input) +0.017 [+0.002, +0.033] 0.032   0.480
+BiomedCLIP fair correction          Hybrid CBM, penalty 0.1 uncorrected minus measured-concept black box (MedSAM input) +0.003 [-0.009, +0.016] 0.683   1.000
+BiomedCLIP fair correction       Shuffled-concept hybrid corrected minus measured-concept black box (radiologist input) +0.003 [-0.012, +0.018] 0.693   1.000
+BiomedCLIP fair correction          Shuffled-concept hybrid uncorrected minus measured-concept black box (MedSAM input) -0.009 [-0.022, +0.004] 0.172   1.000
+BiomedCLIP fair correction                Sequential CBM corrected minus measured-concept black box (radiologist input) -0.040 [-0.067, -0.014] 0.002   0.052
+BiomedCLIP fair correction                   Sequential CBM uncorrected minus measured-concept black box (MedSAM input) -0.063 [-0.089, -0.037] 0.000   0.000
+BiomedCLIP fair correction               Joint CBM p=0.5 corrected minus measured-concept black box (radiologist input) -0.052 [-0.083, -0.021] 0.000   0.000
+BiomedCLIP fair correction                  Joint CBM p=0.5 uncorrected minus measured-concept black box (MedSAM input) -0.011 [-0.023, +0.001] 0.080   1.000
+
+H  HYBRID WITH SHIFTED / RESCALED LESION BOXES (change vs exact box)
+  backbone  heldout jitter  seeds    auc     change_vs_exact_box
+    DINOv2  BUS-BRA      0    3.0 0.8615 +0.000 [+0.000, +0.000]
+    DINOv2  BUS-BRA     10    3.0 0.8631 +0.002 [-0.002, +0.005]
+    DINOv2  BUS-BRA     20    3.0 0.8582 -0.003 [-0.008, +0.002]
+    DINOv2  BUS-BRA     30    3.0 0.8474 -0.014 [-0.020, -0.008]
+    DINOv2 BUS-UCLM      0    3.0 0.9265 +0.000 [+0.000, +0.000]
+    DINOv2 BUS-UCLM     10    3.0 0.9222 -0.004 [-0.011, +0.001]
+    DINOv2 BUS-UCLM     20    3.0 0.9211 -0.005 [-0.019, +0.007]
+    DINOv2 BUS-UCLM     30    3.0 0.9032 -0.024 [-0.048, -0.004]
+    DINOv2     BUSB      0    3.0 0.9276 +0.000 [+0.000, +0.000]
+    DINOv2     BUSB     10    3.0 0.9303 +0.003 [-0.004, +0.010]
+    DINOv2     BUSB     20    3.0 0.9285 +0.001 [-0.007, +0.010]
+    DINOv2     BUSB     30    3.0 0.9254 -0.002 [-0.016, +0.013]
+    DINOv2   BrEaST      0    3.0 0.8636 +0.000 [+0.000, +0.000]
+    DINOv2   BrEaST     10    3.0 0.8636 -0.000 [-0.010, +0.010]
+    DINOv2   BrEaST     20    3.0 0.8616 -0.002 [-0.012, +0.008]
+    DINOv2   BrEaST     30    3.0 0.8622 -0.001 [-0.019, +0.017]
+BiomedCLIP  BUS-BRA      0    3.0 0.8627 +0.000 [+0.000, +0.000]
+BiomedCLIP  BUS-BRA     10    3.0 0.8652 +0.003 [-0.004, +0.009]
+BiomedCLIP  BUS-BRA     20    3.0 0.8544 -0.008 [-0.016, -0.000]
+BiomedCLIP  BUS-BRA     30    3.0 0.8500 -0.013 [-0.023, -0.003]
+BiomedCLIP BUS-UCLM      0    3.0 0.9214 +0.000 [+0.000, +0.000]
+BiomedCLIP BUS-UCLM     10    3.0 0.9181 -0.003 [-0.016, +0.012]
+BiomedCLIP BUS-UCLM     20    3.0 0.9117 -0.010 [-0.032, +0.010]
+BiomedCLIP BUS-UCLM     30    3.0 0.8966 -0.025 [-0.054, +0.001]
+BiomedCLIP     BUSB      0    3.0 0.9227 +0.000 [+0.000, +0.000]
+BiomedCLIP     BUSB     10    3.0 0.9072 -0.015 [-0.033, -0.001]
+BiomedCLIP     BUSB     20    3.0 0.9251 +0.002 [-0.010, +0.016]
+BiomedCLIP     BUSB     30    3.0 0.9056 -0.017 [-0.041, +0.004]
+BiomedCLIP   BrEaST      0    3.0 0.8574 +0.000 [+0.000, +0.000]
+BiomedCLIP   BrEaST     10    3.0 0.8561 -0.002 [-0.014, +0.011]
+BiomedCLIP   BrEaST     20    3.0 0.8618 +0.004 [-0.012, +0.020]
+BiomedCLIP   BrEaST     30    3.0 0.8403 -0.017 [-0.038, +0.003]
+BiomedCLIP   pooled      0    NaN 0.8911 +0.000 [+0.000, +0.000]
+BiomedCLIP   pooled     10    NaN 0.8866 -0.004 [-0.011, +0.002]
+BiomedCLIP   pooled     20    NaN 0.8883 -0.003 [-0.011, +0.005]
+BiomedCLIP   pooled     30    NaN 0.8731 -0.018 [-0.029, -0.008]
+    DINOv2   pooled      0    NaN 0.8948 +0.000 [+0.000, +0.000]
+    DINOv2   pooled     10    NaN 0.8948 -0.000 [-0.003, +0.003]
+    DINOv2   pooled     20    NaN 0.8923 -0.002 [-0.007, +0.003]
+    DINOv2   pooled     30    NaN 0.8846 -0.010 [-0.018, -0.002]
+
+I  LOCAL RECALIBRATION POOLED OVER THE FOUR DATASETS (interval over 100 episodes)
+  backbone                   model  k  ece_before            ece_after          brier_after           sens_after           spec_after
+BiomedCLIP               Black box  8      0.1325 0.139 [0.083, 0.193] 0.150 [0.126, 0.190] 0.799 [0.728, 0.852] 0.809 [0.725, 0.881]
+BiomedCLIP               Black box 16      0.1345 0.119 [0.078, 0.168] 0.134 [0.119, 0.158] 0.810 [0.684, 0.873] 0.834 [0.758, 0.891]
+BiomedCLIP Hybrid CBM, penalty 0.1  8      0.1695 0.137 [0.093, 0.186] 0.147 [0.125, 0.185] 0.801 [0.706, 0.864] 0.815 [0.717, 0.890]
+BiomedCLIP Hybrid CBM, penalty 0.1 16      0.1789 0.121 [0.082, 0.179] 0.137 [0.122, 0.168] 0.793 [0.584, 0.847] 0.826 [0.754, 0.882]
+BiomedCLIP         Joint CBM p=0.5  8      0.1314 0.141 [0.091, 0.195] 0.149 [0.128, 0.179] 0.787 [0.676, 0.859] 0.815 [0.696, 0.884]
+BiomedCLIP         Joint CBM p=0.5 16      0.1403 0.128 [0.088, 0.182] 0.142 [0.127, 0.165] 0.795 [0.737, 0.849] 0.819 [0.735, 0.873]
+BiomedCLIP     Multitask black box  8      0.1267 0.138 [0.083, 0.210] 0.147 [0.120, 0.211] 0.813 [0.727, 0.870] 0.804 [0.694, 0.890]
+BiomedCLIP     Multitask black box 16      0.1393 0.139 [0.082, 0.216] 0.139 [0.111, 0.192] 0.776 [0.594, 0.891] 0.807 [0.700, 0.882]
+BiomedCLIP          Sequential CBM  8      0.1606 0.150 [0.102, 0.200] 0.182 [0.157, 0.212] 0.727 [0.615, 0.794] 0.759 [0.646, 0.834]
+BiomedCLIP          Sequential CBM 16      0.1710 0.146 [0.099, 0.214] 0.174 [0.146, 0.207] 0.744 [0.555, 0.831] 0.770 [0.689, 0.837]
+    DINOv2               Black box  8      0.1410 0.132 [0.081, 0.174] 0.135 [0.109, 0.170] 0.834 [0.747, 0.891] 0.827 [0.751, 0.908]
+    DINOv2               Black box 16      0.1522 0.113 [0.073, 0.165] 0.125 [0.111, 0.154] 0.823 [0.779, 0.875] 0.839 [0.770, 0.883]
+    DINOv2 Hybrid CBM, penalty 0.1  8      0.1741 0.134 [0.091, 0.188] 0.141 [0.119, 0.179] 0.826 [0.744, 0.873] 0.824 [0.740, 0.886]
+    DINOv2 Hybrid CBM, penalty 0.1 16      0.1740 0.114 [0.062, 0.168] 0.131 [0.116, 0.157] 0.821 [0.768, 0.876] 0.836 [0.781, 0.885]
+    DINOv2         Joint CBM p=0.5  8      0.1615 0.136 [0.086, 0.180] 0.138 [0.116, 0.168] 0.815 [0.738, 0.879] 0.832 [0.758, 0.889]
+    DINOv2         Joint CBM p=0.5 16      0.1773 0.123 [0.078, 0.167] 0.134 [0.121, 0.153] 0.807 [0.743, 0.869] 0.829 [0.777, 0.871]
+    DINOv2     Multitask black box  8      0.1216 0.134 [0.083, 0.198] 0.137 [0.114, 0.192] 0.832 [0.759, 0.885] 0.829 [0.726, 0.897]
+    DINOv2     Multitask black box 16      0.1401 0.131 [0.076, 0.193] 0.130 [0.099, 0.178] 0.840 [0.763, 0.904] 0.833 [0.752, 0.892]
+    DINOv2          Sequential CBM  8      0.1603 0.155 [0.103, 0.208] 0.185 [0.161, 0.225] 0.715 [0.593, 0.792] 0.764 [0.666, 0.833]
+    DINOv2          Sequential CBM 16      0.1671 0.154 [0.103, 0.232] 0.179 [0.146, 0.219] 0.730 [0.601, 0.820] 0.773 [0.684, 0.848]
+
+===== TABLE IV WITH CIs: birads_validation
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.9107780612244898,"[0.87, 0.94]",0.8639937106918238,0.8931159420289855
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.8608737244897959,"[0.81, 0.90]",0.8254716981132075,0.8514492753623188
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.8941964285714286,"[0.85, 0.93]",0.8537735849056605,0.9112318840579711
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.8974928594097112,"[0.86, 0.93]",0.8078231292517006,0.905263157894737
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.22291336083782926,"[0.17, 0.28]",0.2921981292517007,0.2912280701754386
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.6419549349412884,"[0.57, 0.71]",0.6396683673469388,0.6315789473684211
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.8206032932060329,"[0.76, 0.88]",0.9395973154362417,0.5971938775510204
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.6380196762932402,"[0.57, 0.70]",0.646421845574388,0.5836109260493005
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.6244264507422402,"[0.54, 0.70]",0.6174636174636174,0.6887820512820513
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.5471520181063749,"[0.36, 0.72]",0.6956335616438356,0.19649122807017538
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.8616033755274262,"[0.78, 0.93]",0.807673860911271,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.8755445544554455,"[0.82, 0.92]",0.9031862745098039,0.7959280303030304
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.7772633744855967,"[0.69, 0.85]",0.7932692307692307,0.7636363636363637
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.4718043377941855,"[0.39, 0.55]",0.5763888888888888,0.4364779874213836
+===== TABLE IV WITH CIs: birads_validation_biomedclip_medsam_int100_noexp_ic_u12_seq
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.8040178571428571,"[0.75, 0.86]",0.7749606918238994,0.8568840579710145
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.7519770408163265,"[0.69, 0.81]",0.721501572327044,0.8115942028985507
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.7996811224489796,"[0.74, 0.85]",0.7796776729559749,0.8858695652173914
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.8037131069501745,"[0.75, 0.86]",0.7323554421768708,0.7964912280701755
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.30853697238971756,"[0.24, 0.38]",0.3533163265306122,0.4175438596491228
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.6309742938749603,"[0.56, 0.70]",0.6179846938775511,0.7859649122807018
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.8324339283243393,"[0.77, 0.88]",0.8671140939597315,0.7145408163265307
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.652713424309743,"[0.59, 0.71]",0.6362994350282486,0.6995336442371751
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.6888439046333783,"[0.62, 0.76]",0.6771771771771772,0.7435897435897436
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.5409279517163335,"[0.33, 0.73]",0.6318493150684932,0.33333333333333326
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.9009845288326301,"[0.84, 0.95]",0.8776978417266186,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.8757425742574257,"[0.82, 0.92]",0.9031862745098039,0.8141571969696969
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.8302469135802468,"[0.76, 0.90]",0.8330829326923077,0.8215909090909091
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.5304107060452238,"[0.44, 0.61]",0.5829861111111111,0.5241090146750524
+===== TABLE IV WITH CIs: birads_validation_biomedclip_medsam_int50_noexp_ic_u12_shuf
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.14021045918367347,"[0.10, 0.19]",0.2509827044025157,0.20471014492753623
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.270344387755102,"[0.21, 0.34]",0.3374606918238993,0.15760869565217392
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.6678890306122449,"[0.60, 0.74]",0.5843160377358491,0.47554347826086957
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.8581402729292289,"[0.81, 0.90]",0.7642431972789115,0.7543859649122806
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.8720406220247541,"[0.82, 0.91]",0.8161139455782312,0.8807017543859649
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.8769279593779754,"[0.83, 0.92]",0.8008078231292517,0.8035087719298246
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.7860107928601079,"[0.72, 0.84]",0.9422818791946309,0.5045918367346939
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.8243097429387496,"[0.77, 0.87]",0.8015536723163842,0.5669553630912725
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.44237516869095816,"[0.36, 0.52]",0.47863247863247865,0.33653846153846156
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.4039984911354205,"[0.26, 0.55]",0.565068493150685,0.22456140350877193
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.34824191279887484,"[0.20, 0.52]",0.4378896882494005,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.32396039603960397,"[0.25, 0.41]",0.3570261437908497,0.4663825757575758
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.37699331275720166,"[0.28, 0.50]",0.30228365384615385,0.6488636363636364
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.8287955699123212,"[0.77, 0.88]",0.76875,0.7129979035639413
+===== TABLE IV WITH CIs: birads_validation_biomedclip_medsam_noexp_ic_u12_rp01_hyb
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.785204081632653,"[0.72, 0.84]",0.7777122641509433,0.8043478260869565
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.739732142857143,"[0.68, 0.80]",0.7242531446540881,0.7518115942028987
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.7875,"[0.73, 0.84]",0.7910770440251572,0.8297101449275363
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.7976832751507459,"[0.74, 0.85]",0.7392644557823129,0.8175438596491228
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.284576324976198,"[0.22, 0.35]",0.3331207482993197,0.3298245614035088
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.6169152649952395,"[0.55, 0.68]",0.5915178571428572,0.712280701754386
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.8094645080946451,"[0.74, 0.86]",0.8241610738255033,0.6954081632653061
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.6434465249127261,"[0.58, 0.71]",0.6229990583804144,0.670219853431046
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.6870445344129554,"[0.61, 0.76]",0.6924231924231924,0.6948717948717948
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.5092417955488495,"[0.29, 0.72]",0.6121575342465753,0.2596491228070175
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.8953586497890296,"[0.81, 0.96]",0.8815347721822542,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.8837128712871287,"[0.83, 0.93]",0.9138071895424836,0.8191287878787878
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.8241383744855968,"[0.75, 0.89]",0.8345853365384616,0.8136363636363636
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.534517766497462,"[0.45, 0.61]",0.5548611111111111,0.5324947589098533
+===== TABLE IV WITH CIs: birads_validation_biomedclip_medsam_noexp_ic_u12_seq
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.8040178571428571,"[0.75, 0.86]",0.7749606918238994,0.8568840579710145
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.7519770408163265,"[0.69, 0.81]",0.721501572327044,0.8115942028985507
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.7996811224489796,"[0.74, 0.85]",0.7796776729559749,0.8858695652173914
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.8037131069501745,"[0.75, 0.86]",0.7323554421768708,0.7964912280701755
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.30853697238971756,"[0.24, 0.38]",0.3533163265306122,0.4175438596491228
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.6309742938749603,"[0.56, 0.70]",0.6179846938775511,0.7859649122807018
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.8324339283243393,"[0.77, 0.88]",0.8671140939597315,0.7145408163265307
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.652713424309743,"[0.59, 0.71]",0.6362994350282486,0.6995336442371751
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.6888439046333783,"[0.62, 0.76]",0.6771771771771772,0.7435897435897436
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.5409279517163335,"[0.33, 0.73]",0.6318493150684932,0.33333333333333326
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.9009845288326301,"[0.84, 0.95]",0.8776978417266186,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.8757425742574257,"[0.82, 0.92]",0.9031862745098039,0.8141571969696969
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.8302469135802468,"[0.76, 0.90]",0.8330829326923077,0.8215909090909091
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.5304107060452238,"[0.44, 0.61]",0.5829861111111111,0.5241090146750524
+===== TABLE IV WITH CIs: birads_validation_dinov2_b_medsam_int100_noexp_ic_u12_seq
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.8339604591836735,"[0.78, 0.88]",0.8094536163522013,0.8315217391304348
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.7987882653061225,"[0.74, 0.85]",0.778498427672956,0.802536231884058
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.8164859693877551,"[0.76, 0.86]",0.796875,0.8469202898550724
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.84823865439543,"[0.80, 0.89]",0.7698767006802721,0.9438596491228071
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.3085052364328784,"[0.24, 0.38]",0.3603316326530612,0.37894736842105264
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.653697238971755,"[0.58, 0.72]",0.635841836734694,0.7087719298245614
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.8376919883769199,"[0.77, 0.90]",0.8496644295302014,0.7178571428571429
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.6646778800380831,"[0.60, 0.73]",0.6593691148775895,0.6309127248501
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.6866396761133603,"[0.61, 0.76]",0.6708246708246709,0.7224358974358975
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.5352697095435686,"[0.33, 0.72]",0.6579623287671232,0.23157894736842105
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.8656821378340367,"[0.78, 0.93]",0.848201438848921,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.8719306930693069,"[0.82, 0.92]",0.9276960784313726,0.8122632575757576
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.8257458847736626,"[0.75, 0.89]",0.8146033653846154,0.8340909090909091
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.4195200738347946,"[0.34, 0.50]",0.5065972222222223,0.429769392033543
+===== TABLE IV WITH CIs: birads_validation_dinov2_b_medsam_int50_noexp_ic_u12_shuf
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.7584183673469388,"[0.69, 0.82]",0.747248427672956,0.6159420289855073
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.09381377551020409,"[0.06, 0.13]",0.16037735849056603,0.16304347826086954
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.09390943877551021,"[0.06, 0.13]",0.16509433962264153,0.15217391304347824
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.8859092351634403,"[0.84, 0.93]",0.8075042517006802,0.9157894736842105
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.8962868930498255,"[0.85, 0.93]",0.796237244897959,0.943859649122807
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.15169787369089177,"[0.10, 0.20]",0.21439200680272108,0.10175438596491229
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.8277985332779854,"[0.76, 0.89]",0.959731543624161,0.625765306122449
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.19854014598540146,"[0.15, 0.26]",0.2428201506591337,0.351765489673551
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.4680611785874943,"[0.39, 0.55]",0.5571725571725572,0.36217948717948717
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.34703885326291967,"[0.20, 0.52]",0.3946917808219178,0.3228070175438596
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.7209563994374121,"[0.56, 0.87]",0.6191846522781774,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.6296039603960396,"[0.54, 0.72]",0.6474673202614379,0.5222537878787878
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.5837834362139918,"[0.47, 0.70]",0.6377704326923077,0.3392045454545454
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.1679280110752192,"[0.12, 0.23]",0.23263888888888892,0.31446540880503143
+===== TABLE IV WITH CIs: birads_validation_dinov2_b_medsam_noexp_ic_u12_rp01_hyb
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.8272002551020408,"[0.77, 0.88]",0.800314465408805,0.8260869565217391
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.7602678571428572,"[0.70, 0.82]",0.7658215408805032,0.7898550724637681
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.7727359693877551,"[0.71, 0.83]",0.7797759433962265,0.8061594202898551
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.8440812440495081,"[0.79, 0.89]",0.7855017006802721,0.9192982456140351
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.3068549666772453,"[0.24, 0.38]",0.36628401360544216,0.2947368421052632
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.6240241193271978,"[0.55, 0.69]",0.6143707482993197,0.6754385964912282
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.8467552234675523,"[0.78, 0.90]",0.9006711409395973,0.7216836734693877
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.6399555696604253,"[0.58, 0.70]",0.6386534839924671,0.628580946035976
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.6553756185335133,"[0.58, 0.73]",0.6488796488796489,0.6778846153846154
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.546020369671822,"[0.36, 0.73]",0.6815068493150686,0.21403508771929824
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.9158931082981716,"[0.86, 0.96]",0.894484412470024,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.8734653465346535,"[0.82, 0.92]",0.9246323529411765,0.8181818181818182
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.8018904320987653,"[0.73, 0.87]",0.8108473557692308,0.7886363636363636
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.5013382556529765,"[0.42, 0.58]",0.5961805555555555,0.49035639412997895
+===== TABLE IV WITH CIs: birads_validation_dinov2_b_medsam_noexp_ic_u12_seq
+descriptor,category,concept,expected,n_pos,N,radiol,radiol_ci,radiol_inBen,radiol_inMal,medsam,medsam_ci,medsam_inBen,medsam_inMal,predicted,predicted_ci,predicted_inBen,predicted_inMal
+Shape,irregular,g_solidity,-,140,252,0.8491709183673468,"[0.80, 0.89]",0.800314465408805,0.9021739130434783,0.7523596938775509,"[0.69, 0.81]",0.7244496855345912,0.8224637681159421,0.8284757653061224,"[0.77, 0.88]",0.809060534591195,0.8659420289855072
+Shape,irregular,g_ellipse_misfit,+,140,252,0.8019770408163265,"[0.74, 0.85]",0.7830188679245284,0.858695652173913,0.6675382653061225,"[0.60, 0.73]",0.6664701257861635,0.6177536231884058,0.8011798469387755,"[0.74, 0.85]",0.7828223270440252,0.8242753623188405
+Shape,irregular,g_circularity,-,140,252,0.7582908163265306,"[0.70, 0.81]",0.7364386792452831,0.8786231884057972,0.7170918367346939,"[0.65, 0.78]",0.6975235849056604,0.8278985507246377,0.8224489795918367,"[0.77, 0.87]",0.8073899371069182,0.8822463768115941
+Margin,non-circumscribed,g_spiculation,+,137,252,0.813836877181847,"[0.76, 0.87]",0.7468112244897959,0.8701754385964913,0.7440177721358299,"[0.68, 0.80]",0.707908163265306,0.7964912280701756,0.8407489685814027,"[0.79, 0.88]",0.7747661564625851,0.9298245614035087
+Margin,non-circumscribed,g_radial_cv,+,137,252,0.4040622024754046,"[0.33, 0.48]",0.4568452380952381,0.39649122807017545,0.3471913678197398,"[0.28, 0.42]",0.37500000000000006,0.34035087719298246,0.31275785464931766,"[0.25, 0.38]",0.35576105442176864,0.375438596491228
+Margin,non-circumscribed,i_margin_blur,+,137,252,0.5337353221199619,"[0.47, 0.60]",0.5480442176870748,0.6912280701754386,0.5685179308156141,"[0.50, 0.64]",0.5739795918367347,0.824561403508772,0.6121231355125356,"[0.54, 0.68]",0.6262755102040816,0.5964912280701755
+Margin,not circumscribed - spiculated,g_spiculation,+,33,252,0.9006503390065034,"[0.84, 0.95]",0.9691275167785235,0.813265306122449,0.7380655873806559,"[0.66, 0.80]",0.7395973154362416,0.6525510204081633,0.8546423135464232,"[0.79, 0.91]",0.8416107382550336,0.7665816326530612
+Margin,indistinct/not circumscribed - indistinct,i_margin_blur,+,115,252,0.5501110758489369,"[0.48, 0.62]",0.5586158192090396,0.6042638241172552,0.5826721675658523,"[0.52, 0.65]",0.5800376647834276,0.6435709526982012,0.6312916534433514,"[0.57, 0.70]",0.6440677966101696,0.6309127248500999
+Echogenicity,heterogeneous,i_heterogeneity,+,57,252,0.6136752136752137,"[0.54, 0.69]",0.6137676137676138,0.6352564102564103,0.6718848403058929,"[0.60, 0.75]",0.6666666666666667,0.6897435897435897,0.6664417453891137,"[0.59, 0.74]",0.6588126588126588,0.6964743589743589
+Echogenicity,complex cystic,i_heterogeneity,+,11,252,0.6454168238400604,"[0.42, 0.85]",0.6952054794520548,0.5263157894736842,0.5677102980007545,"[0.36, 0.78]",0.6909246575342466,0.2771929824561403,0.530554507732931,"[0.34, 0.72]",0.6571061643835616,0.21754385964912282
+Echogenicity,anechoic,i_hypoecho,+,15,252,0.8976090014064698,"[0.80, 0.97]",0.8935251798561151,,0.7808720112517581,"[0.61, 0.93]",0.7726618705035971,,0.860196905766526,"[0.78, 0.93]",0.8470023980815349,
+Posterior_features,shadowing,i_post_shadow,+,50,252,0.839058395635482,"[0.77, 0.90]",0.8780276816608996,0.8049242424242424,0.8451485148514851,"[0.78, 0.90]",0.8933823529411764,0.8044507575757576,0.8598514851485148,"[0.80, 0.91]",0.9113562091503268,0.8129734848484849
+Posterior_features,enhancement,i_post_shadow,-,36,252,0.810594315245478,"[0.72, 0.88]",0.8013325257419746,0.8193181818181818,0.7992541152263375,"[0.71, 0.87]",0.7776442307692307,0.834090909090909,0.8374485596707819,"[0.77, 0.90]",0.8299278846153847,0.840909090909091
+Halo,yes,i_halo,+,55,252,0.5143516382095061,"[0.43, 0.60]",0.5055555555555555,0.49266247379454925,0.4745731425934472,"[0.40, 0.55]",0.5305555555555556,0.43270440251572323,0.4440239963082603,"[0.37, 0.52]",0.529513888888889,0.4419287211740042

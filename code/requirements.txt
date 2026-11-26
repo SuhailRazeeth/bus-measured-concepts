@@ -1,0 +1,17 @@
+numpy
+pandas
+scipy
+scikit-learn
+opencv-python-headless
+pillow
+pydicom
+pyyaml
+openpyxl
+xlrd
+tqdm
+matplotlib
+torch
+torchvision
+timm>=0.9
+open_clip_torch>=2.23
+transformers>=4.40

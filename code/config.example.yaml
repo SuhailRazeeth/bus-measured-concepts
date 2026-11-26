@@ -1,0 +1,48 @@
+# Copy this file to config.yaml (same folder as the scripts) and edit the three paths.
+
+data_root: /path/to/datasets          # folder that contains one sub-folder per dataset (see datasets below)
+work_root: /path/to/work              # all outputs (ROIs, masks, concepts, runs, statistics) are written here
+hf_home:   /path/to/hf_cache          # Hugging Face cache for the encoder and MedSAM weights
+
+# Sub-folder name of each dataset inside data_root.
+# Only the five ultrasound datasets are used in the paper. The mammography entries were used in an early
+# feasibility pilot (05, 06) and can be removed if those folders do not exist.
+datasets:
+  BUSI: BUSI              # Al-Dhabyani et al., benign and malignant folders
+  BUSB: BUSB              # Yap et al., Dataset B
+  BUS-BRA: BUS-BRA        # Gomez-Flores et al.
+  BrEaST: BrEaST          # TCIA BrEaST-Lesions_USG (images, masks, clinical table with BI-RADS descriptors)
+  BUS-UCLM: BUS-UCLM      # Mendeley Data BUS-UCLM (images and colour masks)
+  CBIS-DDSM: CBIS-DDSM-JPEG
+  MIAS: MIAS
+  INbreast: INbreast
+
+roi:
+  out_size: 384          # saved ROI resolution (square)
+  context: 0.25          # margin around the lesion box (fraction of box size)
+  min_box_px: 64         # smaller lesions are expanded to at least this size
+
+features:
+  batch_size: 64
+  backbones: [biomedclip, rad_dino, dinov2_b, resnet50_in]
+
+pilot:
+  seed: 0
+  episodes: 100
+  shots: [1, 2, 4, 8, 16, 32]
+  source_dataset: CBIS-DDSM
+  us_targets: [BUSI, BUSB, BUS-BRA, BrEaST, BUS-UCLM]
+  mg_external: [MIAS, INbreast]
+
+train:
+  img_size: 224
+  unfreeze_blocks: 2      # overridden by --unfreeze 12 (all blocks) in every run of the paper
+  epochs: 20
+  patience: 5
+  batch_size: 32
+  lr_backbone: 2.0e-5
+  lr_head: 1.0e-3
+  weight_decay: 1.0e-4
+  lambda_concept: 1.0
+  lambda_expert: 0.5      # unused in the paper (--no_expert)
+  val_fraction: 0.15      # patient level validation split of the training datasets

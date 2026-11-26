@@ -1,0 +1,245 @@
+ROUND 5 ANALYSES
+
+A  LEAKAGE WITH REFITTED PREDICTORS (out of fold AUC on the test lesions, pooled [95% CI])
+   t = MedSAM targets only, c = predicted concepts only, ct = both; ct - t = information beyond t
+  backbone                   model                   auc_t                   auc_c                  auc_ct               c_minus_t              ct_minus_t  p_ct_minus_t
+    DINOv2         Joint CBM p=0.5 +0.788 [+0.752, +0.821] +0.886 [+0.859, +0.911] +0.886 [+0.860, +0.910] +0.098 [+0.072, +0.128] +0.098 [+0.072, +0.126]         0.000
+    DINOv2    Shuffled-concept CBM +0.788 [+0.752, +0.821] +0.888 [+0.861, +0.913] +0.898 [+0.873, +0.922] +0.100 [+0.069, +0.132] +0.110 [+0.082, +0.140]         0.000
+    DINOv2          Sequential CBM +0.788 [+0.752, +0.821] +0.827 [+0.793, +0.859] +0.822 [+0.785, +0.855] +0.039 [+0.021, +0.058] +0.034 [+0.015, +0.052]         0.002
+    DINOv2 Hybrid CBM, penalty 0.1 +0.788 [+0.752, +0.821] +0.867 [+0.837, +0.894] +0.860 [+0.829, +0.889] +0.079 [+0.058, +0.102] +0.072 [+0.052, +0.091]         0.000
+    DINOv2 Shuffled-concept hybrid +0.788 [+0.752, +0.821] +0.836 [+0.802, +0.869] +0.867 [+0.836, +0.896] +0.048 [+0.010, +0.088] +0.079 [+0.053, +0.106]         0.000
+    DINOv2           Joint CBM p=0 +0.788 [+0.752, +0.821] +0.895 [+0.867, +0.920] +0.891 [+0.862, +0.917] +0.107 [+0.080, +0.137] +0.103 [+0.076, +0.131]         0.000
+    DINOv2         Independent CBM +0.788 [+0.752, +0.821] +0.836 [+0.802, +0.866] +0.832 [+0.796, +0.863] +0.048 [+0.030, +0.066] +0.044 [+0.026, +0.061]         0.000
+BiomedCLIP         Joint CBM p=0.5 +0.788 [+0.752, +0.821] +0.871 [+0.843, +0.898] +0.872 [+0.844, +0.899] +0.083 [+0.058, +0.112] +0.084 [+0.059, +0.111]         0.000
+BiomedCLIP    Shuffled-concept CBM +0.788 [+0.752, +0.821] +0.855 [+0.824, +0.884] +0.871 [+0.841, +0.899] +0.067 [+0.033, +0.104] +0.083 [+0.056, +0.112]         0.000
+BiomedCLIP          Sequential CBM +0.788 [+0.752, +0.821] +0.837 [+0.804, +0.867] +0.841 [+0.806, +0.870] +0.049 [+0.029, +0.068] +0.053 [+0.034, +0.071]         0.000
+BiomedCLIP Hybrid CBM, penalty 0.1 +0.788 [+0.752, +0.821] +0.854 [+0.823, +0.882] +0.853 [+0.820, +0.881] +0.065 [+0.045, +0.088] +0.065 [+0.046, +0.083]         0.000
+BiomedCLIP Shuffled-concept hybrid +0.788 [+0.752, +0.821] +0.723 [+0.682, +0.763] +0.822 [+0.787, +0.853] -0.065 [-0.109, -0.018] +0.034 [+0.014, +0.055]         0.000
+BiomedCLIP           Joint CBM p=0 +0.788 [+0.752, +0.821] +0.871 [+0.843, +0.896] +0.868 [+0.840, +0.894] +0.083 [+0.060, +0.109] +0.079 [+0.056, +0.105]         0.000
+BiomedCLIP         Independent CBM +0.788 [+0.752, +0.821] +0.837 [+0.804, +0.867] +0.841 [+0.806, +0.871] +0.049 [+0.029, +0.068] +0.053 [+0.033, +0.071]         0.000
+
+   per dataset (out of fold AUC):
+inputs                                           c     ct      t
+backbone   model                   heldout                      
+BiomedCLIP Hybrid CBM, penalty 0.1 BUS-BRA   0.839  0.871  0.827
+                                   BUS-UCLM  0.875  0.863  0.800
+                                   BUSB      0.890  0.887  0.861
+                                   BrEaST    0.813  0.791  0.666
+           Independent CBM         BUS-BRA   0.830  0.860  0.827
+                                   BUS-UCLM  0.854  0.852  0.800
+                                   BUSB      0.874  0.880  0.861
+                                   BrEaST    0.791  0.775  0.666
+           Joint CBM p=0           BUS-BRA   0.860  0.881  0.827
+                                   BUS-UCLM  0.914  0.899  0.800
+                                   BUSB      0.903  0.893  0.861
+                                   BrEaST    0.808  0.800  0.666
+           Joint CBM p=0.5         BUS-BRA   0.855  0.872  0.827
+                                   BUS-UCLM  0.898  0.894  0.800
+                                   BUSB      0.891  0.887  0.861
+                                   BrEaST    0.844  0.839  0.666
+           Sequential CBM          BUS-BRA   0.830  0.860  0.827
+                                   BUS-UCLM  0.855  0.853  0.800
+                                   BUSB      0.874  0.880  0.861
+                                   BrEaST    0.791  0.775  0.666
+           Shuffled-concept CBM    BUS-BRA   0.847  0.884  0.827
+                                   BUS-UCLM  0.862  0.880  0.800
+                                   BUSB      0.853  0.867  0.861
+                                   BrEaST    0.862  0.857  0.666
+           Shuffled-concept hybrid BUS-BRA   0.708  0.857  0.827
+                                   BUS-UCLM  0.643  0.816  0.800
+                                   BUSB      0.782  0.843  0.861
+                                   BrEaST    0.757  0.773  0.666
+DINOv2     Hybrid CBM, penalty 0.1 BUS-BRA   0.877  0.884  0.827
+                                   BUS-UCLM  0.896  0.885  0.800
+                                   BUSB      0.872  0.875  0.861
+                                   BrEaST    0.826  0.799  0.666
+           Independent CBM         BUS-BRA   0.829  0.853  0.827
+                                   BUS-UCLM  0.856  0.848  0.800
+                                   BUSB      0.878  0.871  0.861
+                                   BrEaST    0.785  0.759  0.666
+           Joint CBM p=0           BUS-BRA   0.883  0.891  0.827
+                                   BUS-UCLM  0.926  0.922  0.800
+                                   BUSB      0.902  0.894  0.861
+                                   BrEaST    0.872  0.860  0.666
+           Joint CBM p=0.5         BUS-BRA   0.872  0.882  0.827
+                                   BUS-UCLM  0.906  0.913  0.800
+                                   BUSB      0.900  0.896  0.861
+                                   BrEaST    0.865  0.854  0.666
+           Sequential CBM          BUS-BRA   0.811  0.841  0.827
+                                   BUS-UCLM  0.834  0.824  0.800
+                                   BUSB      0.877  0.875  0.861
+                                   BrEaST    0.791  0.753  0.666
+           Shuffled-concept CBM    BUS-BRA   0.876  0.897  0.827
+                                   BUS-UCLM  0.929  0.930  0.800
+                                   BUSB      0.873  0.884  0.861
+                                   BrEaST    0.876  0.885  0.666
+           Shuffled-concept hybrid BUS-BRA   0.845  0.888  0.827
+                                   BUS-UCLM  0.829  0.864  0.800
+                                   BUSB      0.824  0.867  0.861
+                                   BrEaST    0.846  0.850  0.666
+
+A2 EXCESS GAIN BEYOND THE TARGETS (A minus B, paired)
+  backbone                       A               B gain_beyond_t_A_minus_B     p
+    DINOv2         Joint CBM p=0.5  Sequential CBM +0.064 [+0.040, +0.090] 0.000
+    DINOv2         Joint CBM p=0.5 Independent CBM +0.054 [+0.034, +0.077] 0.000
+    DINOv2           Joint CBM p=0  Sequential CBM +0.069 [+0.046, +0.094] 0.000
+    DINOv2 Hybrid CBM, penalty 0.1  Sequential CBM +0.038 [+0.024, +0.053] 0.000
+BiomedCLIP         Joint CBM p=0.5  Sequential CBM +0.031 [+0.013, +0.051] 0.002
+BiomedCLIP         Joint CBM p=0.5 Independent CBM +0.031 [+0.014, +0.052] 0.002
+BiomedCLIP           Joint CBM p=0  Sequential CBM +0.027 [+0.010, +0.046] 0.002
+BiomedCLIP Hybrid CBM, penalty 0.1  Sequential CBM +0.012 [+0.002, +0.022] 0.023
+
+B  DESCRIPTOR AUC ON BrEaST, RAW AND ADJUSTED FOR MALIGNANCY (label, black box logit, own logit)
+  backbone                                        descriptor          concept                  source  n_pos   N   raw  adj_label  adj_label_bb  adj_label_own
+    DINOv2                                  Shape: irregular       g_solidity        Radiologist mask    140 252 0.849      0.702         0.571            NaN
+    DINOv2                                  Shape: irregular       g_solidity             MedSAM mask    140 252 0.752      0.661         0.585            NaN
+    DINOv2                                  Shape: irregular       g_solidity          Sequential CBM    140 252 0.828      0.699         0.586          0.593
+    DINOv2                                  Shape: irregular       g_solidity Hybrid CBM, penalty 0.1    140 252 0.827      0.706         0.601          0.582
+    DINOv2                                  Shape: irregular       g_solidity    Shuffled-concept CBM    140 252 0.758      0.685         0.544          0.562
+    DINOv2                                  Shape: irregular g_ellipse_misfit        Radiologist mask    140 252 0.802      0.723         0.625            NaN
+    DINOv2                                  Shape: irregular g_ellipse_misfit             MedSAM mask    140 252 0.668      0.619         0.570            NaN
+    DINOv2                                  Shape: irregular g_ellipse_misfit          Sequential CBM    140 252 0.801      0.678         0.579          0.577
+    DINOv2                                  Shape: irregular g_ellipse_misfit Hybrid CBM, penalty 0.1    140 252 0.760      0.677         0.592          0.565
+    DINOv2                                  Shape: irregular g_ellipse_misfit    Shuffled-concept CBM    140 252 0.094      0.237         0.474          0.496
+    DINOv2                                  Shape: irregular    g_circularity        Radiologist mask    140 252 0.758      0.663         0.611            NaN
+    DINOv2                                  Shape: irregular    g_circularity             MedSAM mask    140 252 0.717      0.641         0.575            NaN
+    DINOv2                                  Shape: irregular    g_circularity          Sequential CBM    140 252 0.822      0.708         0.603          0.596
+    DINOv2                                  Shape: irregular    g_circularity Hybrid CBM, penalty 0.1    140 252 0.773      0.685         0.593          0.564
+    DINOv2                                  Shape: irregular    g_circularity    Shuffled-concept CBM    140 252 0.094      0.236         0.476          0.498
+    DINOv2                         Margin: non-circumscribed    g_spiculation        Radiologist mask    137 252 0.814      0.537         0.435            NaN
+    DINOv2                         Margin: non-circumscribed    g_spiculation             MedSAM mask    137 252 0.744      0.555         0.481            NaN
+    DINOv2                         Margin: non-circumscribed    g_spiculation          Sequential CBM    137 252 0.841      0.670         0.558          0.525
+    DINOv2                         Margin: non-circumscribed    g_spiculation Hybrid CBM, penalty 0.1    137 252 0.844      0.686         0.577          0.527
+    DINOv2                         Margin: non-circumscribed    g_spiculation    Shuffled-concept CBM    137 252 0.886      0.738         0.524          0.501
+    DINOv2                         Margin: non-circumscribed      g_radial_cv        Radiologist mask    137 252 0.404      0.473         0.509            NaN
+    DINOv2                         Margin: non-circumscribed      g_radial_cv             MedSAM mask    137 252 0.347      0.423         0.490            NaN
+    DINOv2                         Margin: non-circumscribed      g_radial_cv          Sequential CBM    137 252 0.313      0.423         0.498          0.508
+    DINOv2                         Margin: non-circumscribed      g_radial_cv Hybrid CBM, penalty 0.1    137 252 0.307      0.420         0.493          0.506
+    DINOv2                         Margin: non-circumscribed      g_radial_cv    Shuffled-concept CBM    137 252 0.896      0.723         0.585          0.593
+    DINOv2                         Margin: non-circumscribed    i_margin_blur        Radiologist mask    137 252 0.534      0.532         0.483            NaN
+    DINOv2                         Margin: non-circumscribed    i_margin_blur             MedSAM mask    137 252 0.569      0.536         0.491            NaN
+    DINOv2                         Margin: non-circumscribed    i_margin_blur          Sequential CBM    137 252 0.612      0.557         0.501          0.452
+    DINOv2                         Margin: non-circumscribed    i_margin_blur Hybrid CBM, penalty 0.1    137 252 0.624      0.562         0.511          0.498
+    DINOv2                         Margin: non-circumscribed    i_margin_blur    Shuffled-concept CBM    137 252 0.152      0.275         0.496          0.580
+    DINOv2            Margin: not circumscribed - spiculated    g_spiculation        Radiologist mask     33 252 0.901      0.796         0.769            NaN
+    DINOv2            Margin: not circumscribed - spiculated    g_spiculation             MedSAM mask     33 252 0.738      0.612         0.542            NaN
+    DINOv2            Margin: not circumscribed - spiculated    g_spiculation          Sequential CBM     33 252 0.855      0.761         0.691          0.590
+    DINOv2            Margin: not circumscribed - spiculated    g_spiculation Hybrid CBM, penalty 0.1     33 252 0.847      0.737         0.657          0.653
+    DINOv2            Margin: not circumscribed - spiculated    g_spiculation    Shuffled-concept CBM     33 252 0.828      0.682         0.477          0.495
+    DINOv2 Margin: indistinct/not circumscribed - indistinct    i_margin_blur        Radiologist mask    115 252 0.550      0.549         0.504            NaN
+    DINOv2 Margin: indistinct/not circumscribed - indistinct    i_margin_blur             MedSAM mask    115 252 0.583      0.555         0.516            NaN
+    DINOv2 Margin: indistinct/not circumscribed - indistinct    i_margin_blur          Sequential CBM    115 252 0.631      0.585         0.533          0.476
+    DINOv2 Margin: indistinct/not circumscribed - indistinct    i_margin_blur Hybrid CBM, penalty 0.1    115 252 0.640      0.590         0.541          0.529
+    DINOv2 Margin: indistinct/not circumscribed - indistinct    i_margin_blur    Shuffled-concept CBM    115 252 0.199      0.289         0.497          0.568
+    DINOv2                       Echogenicity: heterogeneous  i_heterogeneity        Radiologist mask     57 252 0.614      0.623         0.632            NaN
+    DINOv2                       Echogenicity: heterogeneous  i_heterogeneity             MedSAM mask     57 252 0.672      0.677         0.686            NaN
+    DINOv2                       Echogenicity: heterogeneous  i_heterogeneity          Sequential CBM     57 252 0.666      0.672         0.686          0.685
+    DINOv2                       Echogenicity: heterogeneous  i_heterogeneity Hybrid CBM, penalty 0.1     57 252 0.655      0.660         0.682          0.678
+    DINOv2                       Echogenicity: heterogeneous  i_heterogeneity    Shuffled-concept CBM     57 252 0.468      0.485         0.530          0.509
+    DINOv2                      Echogenicity: complex cystic  i_heterogeneity        Radiologist mask     11 252 0.645      0.650         0.660            NaN
+    DINOv2                      Echogenicity: complex cystic  i_heterogeneity             MedSAM mask     11 252 0.568      0.573         0.590            NaN
+    DINOv2                      Echogenicity: complex cystic  i_heterogeneity          Sequential CBM     11 252 0.531      0.541         0.581          0.582
+    DINOv2                      Echogenicity: complex cystic  i_heterogeneity Hybrid CBM, penalty 0.1     11 252 0.546      0.555         0.593          0.603
+    DINOv2                      Echogenicity: complex cystic  i_heterogeneity    Shuffled-concept CBM     11 252 0.347      0.353         0.434          0.367
+    DINOv2                            Echogenicity: anechoic       i_hypoecho        Radiologist mask     15 252 0.898      0.895         0.896            NaN
+    DINOv2                            Echogenicity: anechoic       i_hypoecho             MedSAM mask     15 252 0.781      0.781         0.781            NaN
+    DINOv2                            Echogenicity: anechoic       i_hypoecho          Sequential CBM     15 252 0.860      0.843         0.835          0.801
+    DINOv2                            Echogenicity: anechoic       i_hypoecho Hybrid CBM, penalty 0.1     15 252 0.916      0.906         0.904          0.886
+    DINOv2                            Echogenicity: anechoic       i_hypoecho    Shuffled-concept CBM     15 252 0.721      0.632         0.417          0.633
+    DINOv2                     Posterior_features: shadowing    i_post_shadow        Radiologist mask     50 252 0.839      0.812         0.782            NaN
+    DINOv2                     Posterior_features: shadowing    i_post_shadow             MedSAM mask     50 252 0.845      0.818         0.782            NaN
+    DINOv2                     Posterior_features: shadowing    i_post_shadow          Sequential CBM     50 252 0.860      0.834         0.801          0.681
+    DINOv2                     Posterior_features: shadowing    i_post_shadow Hybrid CBM, penalty 0.1     50 252 0.873      0.840         0.803          0.764
+    DINOv2                     Posterior_features: shadowing    i_post_shadow    Shuffled-concept CBM     50 252 0.630      0.617         0.397          0.318
+    DINOv2                   Posterior_features: enhancement    i_post_shadow        Radiologist mask     36 252 0.811      0.804         0.790            NaN
+    DINOv2                   Posterior_features: enhancement    i_post_shadow             MedSAM mask     36 252 0.799      0.793         0.772            NaN
+    DINOv2                   Posterior_features: enhancement    i_post_shadow          Sequential CBM     36 252 0.837      0.832         0.814          0.781
+    DINOv2                   Posterior_features: enhancement    i_post_shadow Hybrid CBM, penalty 0.1     36 252 0.802      0.801         0.780          0.763
+    DINOv2                   Posterior_features: enhancement    i_post_shadow    Shuffled-concept CBM     36 252 0.584      0.583         0.470          0.439
+    DINOv2                                         Halo: yes           i_halo        Radiologist mask     55 252 0.514      0.501         0.519            NaN
+    DINOv2                                         Halo: yes           i_halo             MedSAM mask     55 252 0.475      0.478         0.487            NaN
+    DINOv2                                         Halo: yes           i_halo          Sequential CBM     55 252 0.444      0.485         0.502          0.497
+    DINOv2                                         Halo: yes           i_halo Hybrid CBM, penalty 0.1     55 252 0.501      0.526         0.510          0.506
+    DINOv2                                         Halo: yes           i_halo    Shuffled-concept CBM     55 252 0.168      0.308         0.459          0.472
+BiomedCLIP                                  Shape: irregular       g_solidity        Radiologist mask    140 252 0.849      0.702         0.560            NaN
+BiomedCLIP                                  Shape: irregular       g_solidity             MedSAM mask    140 252 0.752      0.661         0.560            NaN
+BiomedCLIP                                  Shape: irregular       g_solidity          Sequential CBM    140 252 0.804      0.683         0.558          0.578
+BiomedCLIP                                  Shape: irregular       g_solidity Hybrid CBM, penalty 0.1    140 252 0.785      0.680         0.558          0.530
+BiomedCLIP                                  Shape: irregular       g_solidity    Shuffled-concept CBM    140 252 0.140      0.292         0.502          0.532
+BiomedCLIP                                  Shape: irregular g_ellipse_misfit        Radiologist mask    140 252 0.802      0.723         0.612            NaN
+BiomedCLIP                                  Shape: irregular g_ellipse_misfit             MedSAM mask    140 252 0.668      0.619         0.546            NaN
+BiomedCLIP                                  Shape: irregular g_ellipse_misfit          Sequential CBM    140 252 0.752      0.650         0.547          0.552
+BiomedCLIP                                  Shape: irregular g_ellipse_misfit Hybrid CBM, penalty 0.1    140 252 0.740      0.648         0.556          0.532
+BiomedCLIP                                  Shape: irregular g_ellipse_misfit    Shuffled-concept CBM    140 252 0.270      0.387         0.482          0.454
+BiomedCLIP                                  Shape: irregular    g_circularity        Radiologist mask    140 252 0.758      0.663         0.597            NaN
+BiomedCLIP                                  Shape: irregular    g_circularity             MedSAM mask    140 252 0.717      0.641         0.562            NaN
+BiomedCLIP                                  Shape: irregular    g_circularity          Sequential CBM    140 252 0.800      0.688         0.560          0.570
+BiomedCLIP                                  Shape: irregular    g_circularity Hybrid CBM, penalty 0.1    140 252 0.788      0.687         0.568          0.535
+BiomedCLIP                                  Shape: irregular    g_circularity    Shuffled-concept CBM    140 252 0.668      0.544         0.501          0.476
+BiomedCLIP                         Margin: non-circumscribed    g_spiculation        Radiologist mask    137 252 0.814      0.537         0.427            NaN
+BiomedCLIP                         Margin: non-circumscribed    g_spiculation             MedSAM mask    137 252 0.744      0.555         0.475            NaN
+BiomedCLIP                         Margin: non-circumscribed    g_spiculation          Sequential CBM    137 252 0.804      0.647         0.512          0.488
+BiomedCLIP                         Margin: non-circumscribed    g_spiculation Hybrid CBM, penalty 0.1    137 252 0.798      0.650         0.523          0.489
+BiomedCLIP                         Margin: non-circumscribed    g_spiculation    Shuffled-concept CBM    137 252 0.858      0.692         0.517          0.455
+BiomedCLIP                         Margin: non-circumscribed      g_radial_cv        Radiologist mask    137 252 0.404      0.473         0.498            NaN
+BiomedCLIP                         Margin: non-circumscribed      g_radial_cv             MedSAM mask    137 252 0.347      0.423         0.490            NaN
+BiomedCLIP                         Margin: non-circumscribed      g_radial_cv          Sequential CBM    137 252 0.309      0.421         0.496          0.502
+BiomedCLIP                         Margin: non-circumscribed      g_radial_cv Hybrid CBM, penalty 0.1    137 252 0.285      0.401         0.480          0.494
+BiomedCLIP                         Margin: non-circumscribed      g_radial_cv    Shuffled-concept CBM    137 252 0.872      0.719         0.513          0.539
+BiomedCLIP                         Margin: non-circumscribed    i_margin_blur        Radiologist mask    137 252 0.534      0.532         0.486            NaN
+BiomedCLIP                         Margin: non-circumscribed    i_margin_blur             MedSAM mask    137 252 0.569      0.536         0.488            NaN
+BiomedCLIP                         Margin: non-circumscribed    i_margin_blur          Sequential CBM    137 252 0.631      0.568         0.494          0.451
+BiomedCLIP                         Margin: non-circumscribed    i_margin_blur Hybrid CBM, penalty 0.1    137 252 0.617      0.557         0.499          0.477
+BiomedCLIP                         Margin: non-circumscribed    i_margin_blur    Shuffled-concept CBM    137 252 0.877      0.715         0.534          0.503
+BiomedCLIP            Margin: not circumscribed - spiculated    g_spiculation        Radiologist mask     33 252 0.901      0.796         0.751            NaN
+BiomedCLIP            Margin: not circumscribed - spiculated    g_spiculation             MedSAM mask     33 252 0.738      0.612         0.519            NaN
+BiomedCLIP            Margin: not circumscribed - spiculated    g_spiculation          Sequential CBM     33 252 0.832      0.730         0.603          0.529
+BiomedCLIP            Margin: not circumscribed - spiculated    g_spiculation Hybrid CBM, penalty 0.1     33 252 0.809      0.711         0.579          0.558
+BiomedCLIP            Margin: not circumscribed - spiculated    g_spiculation    Shuffled-concept CBM     33 252 0.786      0.641         0.433          0.392
+BiomedCLIP Margin: indistinct/not circumscribed - indistinct    i_margin_blur        Radiologist mask    115 252 0.550      0.549         0.506            NaN
+BiomedCLIP Margin: indistinct/not circumscribed - indistinct    i_margin_blur             MedSAM mask    115 252 0.583      0.555         0.512            NaN
+BiomedCLIP Margin: indistinct/not circumscribed - indistinct    i_margin_blur          Sequential CBM    115 252 0.653      0.602         0.531          0.480
+BiomedCLIP Margin: indistinct/not circumscribed - indistinct    i_margin_blur Hybrid CBM, penalty 0.1    115 252 0.643      0.595         0.542          0.521
+BiomedCLIP Margin: indistinct/not circumscribed - indistinct    i_margin_blur    Shuffled-concept CBM    115 252 0.824      0.696         0.520          0.477
+BiomedCLIP                       Echogenicity: heterogeneous  i_heterogeneity        Radiologist mask     57 252 0.614      0.623         0.631            NaN
+BiomedCLIP                       Echogenicity: heterogeneous  i_heterogeneity             MedSAM mask     57 252 0.672      0.677         0.681            NaN
+BiomedCLIP                       Echogenicity: heterogeneous  i_heterogeneity          Sequential CBM     57 252 0.689      0.701         0.705          0.710
+BiomedCLIP                       Echogenicity: heterogeneous  i_heterogeneity Hybrid CBM, penalty 0.1     57 252 0.687      0.694         0.705          0.717
+BiomedCLIP                       Echogenicity: heterogeneous  i_heterogeneity    Shuffled-concept CBM     57 252 0.442      0.441         0.412          0.415
+BiomedCLIP                      Echogenicity: complex cystic  i_heterogeneity        Radiologist mask     11 252 0.645      0.650         0.663            NaN
+BiomedCLIP                      Echogenicity: complex cystic  i_heterogeneity             MedSAM mask     11 252 0.568      0.573         0.601            NaN
+BiomedCLIP                      Echogenicity: complex cystic  i_heterogeneity          Sequential CBM     11 252 0.541      0.550         0.605          0.586
+BiomedCLIP                      Echogenicity: complex cystic  i_heterogeneity Hybrid CBM, penalty 0.1     11 252 0.509      0.518         0.574          0.565
+BiomedCLIP                      Echogenicity: complex cystic  i_heterogeneity    Shuffled-concept CBM     11 252 0.404      0.453         0.537          0.505
+BiomedCLIP                            Echogenicity: anechoic       i_hypoecho        Radiologist mask     15 252 0.898      0.895         0.896            NaN
+BiomedCLIP                            Echogenicity: anechoic       i_hypoecho             MedSAM mask     15 252 0.781      0.781         0.780            NaN
+BiomedCLIP                            Echogenicity: anechoic       i_hypoecho          Sequential CBM     15 252 0.901      0.884         0.874          0.871
+BiomedCLIP                            Echogenicity: anechoic       i_hypoecho Hybrid CBM, penalty 0.1     15 252 0.895      0.882         0.865          0.865
+BiomedCLIP                            Echogenicity: anechoic       i_hypoecho    Shuffled-concept CBM     15 252 0.348      0.427         0.521          0.430
+BiomedCLIP                     Posterior_features: shadowing    i_post_shadow        Radiologist mask     50 252 0.839      0.812         0.741            NaN
+BiomedCLIP                     Posterior_features: shadowing    i_post_shadow             MedSAM mask     50 252 0.845      0.818         0.744            NaN
+BiomedCLIP                     Posterior_features: shadowing    i_post_shadow          Sequential CBM     50 252 0.876      0.837         0.755          0.687
+BiomedCLIP                     Posterior_features: shadowing    i_post_shadow Hybrid CBM, penalty 0.1     50 252 0.884      0.844         0.762          0.758
+BiomedCLIP                     Posterior_features: shadowing    i_post_shadow    Shuffled-concept CBM     50 252 0.324      0.416         0.540          0.514
+BiomedCLIP                   Posterior_features: enhancement    i_post_shadow        Radiologist mask     36 252 0.811      0.804         0.772            NaN
+BiomedCLIP                   Posterior_features: enhancement    i_post_shadow             MedSAM mask     36 252 0.799      0.793         0.750            NaN
+BiomedCLIP                   Posterior_features: enhancement    i_post_shadow          Sequential CBM     36 252 0.830      0.826         0.797          0.765
+BiomedCLIP                   Posterior_features: enhancement    i_post_shadow Hybrid CBM, penalty 0.1     36 252 0.824      0.827         0.802          0.796
+BiomedCLIP                   Posterior_features: enhancement    i_post_shadow    Shuffled-concept CBM     36 252 0.377      0.394         0.458          0.443
+BiomedCLIP                                         Halo: yes           i_halo        Radiologist mask     55 252 0.514      0.501         0.516            NaN
+BiomedCLIP                                         Halo: yes           i_halo             MedSAM mask     55 252 0.475      0.478         0.492            NaN
+BiomedCLIP                                         Halo: yes           i_halo          Sequential CBM     55 252 0.530      0.540         0.552          0.550
+BiomedCLIP                                         Halo: yes           i_halo Hybrid CBM, penalty 0.1     55 252 0.535      0.539         0.539          0.534
+BiomedCLIP                                         Halo: yes           i_halo    Shuffled-concept CBM     55 252 0.829      0.708         0.511          0.546
+
+   summary over rows (number of rows with AUC > 0.5, mean AUC):
+   BiomedCLIP Hybrid CBM, penalty 0.1      raw 13/14 mean 0.700  adj_label 13/14 mean 0.660  adj_label_bb 12/14 mean 0.611  adj_label_own 11/14 mean 0.598
+   BiomedCLIP MedSAM mask                  raw 12/14 mean 0.661  adj_label 12/14 mean 0.623  adj_label_bb 10/14 mean 0.586
+   BiomedCLIP Radiologist mask             raw 13/14 mean 0.709  adj_label 13/14 mean 0.661  adj_label_bb 11/14 mean 0.618
+   BiomedCLIP Sequential CBM               raw 13/14 mean 0.711  adj_label 13/14 mean 0.666  adj_label_bb 12/14 mean 0.613  adj_label_own 11/14 mean 0.594
+   BiomedCLIP Shuffled-concept CBM         raw 7/14 mean 0.573  adj_label 7/14 mean 0.537  adj_label_bb 10/14 mean 0.499  adj_label_own 6/14 mean 0.477
+   DINOv2     Hybrid CBM, penalty 0.1      raw 13/14 mean 0.708  adj_label 13/14 mean 0.668  adj_label_bb 13/14 mean 0.631  adj_label_own 13/14 mean 0.616
+   DINOv2     MedSAM mask                  raw 12/14 mean 0.661  adj_label 12/14 mean 0.623  adj_label_bb 10/14 mean 0.596
+   DINOv2     Radiologist mask             raw 13/14 mean 0.709  adj_label 13/14 mean 0.661  adj_label_bb 12/14 mean 0.628
+   DINOv2     Sequential CBM               raw 12/14 mean 0.707  adj_label 12/14 mean 0.663  adj_label_bb 13/14 mean 0.626  adj_label_own 11/14 mean 0.596
+   DINOv2     Shuffled-concept CBM         raw 7/14 mean 0.487  adj_label 7/14 mean 0.489  adj_label_bb 4/14 mean 0.484  adj_label_own 7/14 mean 0.502

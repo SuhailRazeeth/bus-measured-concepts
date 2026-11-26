@@ -1,0 +1,11 @@
+backbone,family,model,internal_val_auc,selected
+DINOv2,CBM intervention rate p,Joint CBM p=0.25,0.9361803949851147,False
+DINOv2,CBM intervention rate p,Joint CBM p=0.5,0.9384139421334836,True
+DINOv2,CBM intervention rate p,Joint CBM p=0.75,0.9273064695333899,False
+DINOv2,CBM intervention rate p,Joint CBM p=1.0,0.88298164463154,False
+DINOv2,Hybrid residual penalty,"Hybrid CBM, penalty 0.1",0.93531802655763,True
+DINOv2,Hybrid residual penalty,"Hybrid CBM, penalty 1.0",0.8735124127218367,False
+BiomedCLIP,CBM intervention rate p,Joint CBM p=0.25,0.9340786012114315,False
+BiomedCLIP,CBM intervention rate p,Joint CBM p=0.5,0.9351858132009946,True
+BiomedCLIP,Hybrid residual penalty,"Hybrid CBM, penalty 0.1",0.9325798088036137,True
+BiomedCLIP,Hybrid residual penalty,"Hybrid CBM, penalty 1.0",0.8757706571580518,False
